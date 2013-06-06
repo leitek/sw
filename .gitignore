@@ -1,0 +1,7 @@
+/houyi/keil/stm32f103/Project/*/MDK/*.*
+/houyi/keil/stm32f103/Project/*/MDK/Debug
+!/houyi/keil/stm32f103/Project/*/MDK/*.uvproj
+!/houyi/keil/stm32f103/Project/*/MDK/*.uvopt
+!/houyi/keil/stm32f103/Project/*/MDK/*.c
+/houyi/keil/stm32f103/Workspace/*
+!/houyi/keil/stm32f103/Workspace/*.uvmpw

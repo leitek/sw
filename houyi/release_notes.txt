@@ -1,0 +1,7 @@
+v1.0.0: first release
+v1.0.1: Add driver for LCD controller HX8347A.
+v1.0.2: Add uC/OS III source code.
+v1.0.3: uC/OS III source code update.
+v1.0.4: Add driver for LCD controller LCD_SPFD5408, optimize LCD touchscreen.
+v1.0.5: Fix the USB mouse example compatibility with Windows XP.
+v1.0.6: NVIC update.
