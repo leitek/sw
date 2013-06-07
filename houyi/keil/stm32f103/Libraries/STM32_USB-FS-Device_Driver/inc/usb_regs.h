@@ -8,7 +8,7 @@
   ******************************************************************************
   * @attention
   *
-  * COPYRIGHT 2012 STMicroelectronicsCOPYRIGHT
+  * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
   *
   * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
   * You may not use this file except in compliance with the License.
@@ -681,4 +681,4 @@ uint16_t ByteSwap(uint16_t);
 
 #endif /* __USB_REGS_H */
 
-/************************ (C) COPYRIGHT STMicroelectronics ***************************/
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -2613,7 +2613,7 @@ FRESULT f_sync (
 			res = move_window(fp->fs, fp->dir_sect);
 			if (res == FR_OK) {
 				dir = fp->dir_ptr;
-				dir[DIR_Attr] |= AM_LTK;					/* Set archive bit */
+				dir[DIR_Attr] |= AM_ARC;					/* Set archive bit */
 				ST_DWORD(dir+DIR_FileSize, fp->fsize);		/* Update file size */
 				ST_CLUST(dir, fp->sclust);					/* Update start cluster */
 				tim = get_fattime();						/* Update updated time */
@@ -3352,7 +3352,7 @@ FRESULT f_chmod (
 			if (!dir) {						/* Is it a root directory? */
 				res = FR_INVALID_NAME;
 			} else {						/* File or sub directory */
-				mask &= AM_RDO|AM_HID|AM_SYS|AM_LTK;	/* Valid attribute mask */
+				mask &= AM_RDO|AM_HID|AM_SYS|AM_ARC;	/* Valid attribute mask */
 				dir[DIR_Attr] = (value & mask) | (dir[DIR_Attr] & (BYTE)~mask);	/* Apply attribute change */
 				dj.fs->wflag = 1;
 				res = sync(dj.fs);
@@ -3447,7 +3447,7 @@ FRESULT f_rename (
 					if (res == FR_OK) {
 						dir = djn.dir;					/* Copy object information except for name */
 						mem_cpy(dir+13, buf+2, 19);
-						dir[DIR_Attr] = buf[0] | AM_LTK;
+						dir[DIR_Attr] = buf[0] | AM_ARC;
 						djo.fs->wflag = 1;
 						if (djo.sclust != djn.sclust && (dir[DIR_Attr] & AM_DIR)) {		/* Update .. entry in the directory if needed */
 							dw = clust2sect(djn.fs, LD_CLUST(dir));

@@ -19,7 +19,7 @@ Segger Microcontroller Systeme GmbH, June 2003
 
 
 
-IJG JPEG LIBRARY:  SYSTEM LTKHITECTURE
+IJG JPEG LIBRARY:  SYSTEM ARCHITECTURE
 
 Copyright (C) 1991-1995, Thomas G. Lane.
 This file is part of the Independent JPEG Group's software.

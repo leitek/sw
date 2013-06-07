@@ -14,7 +14,7 @@
 * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
 * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
 *
-* COPYRIGHT 2012 STMicroelectronicsCOPYRIGHT
+* <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
 *******************************************************************************
 */ 
 /*includes----------------------------------------------------------------------*/
@@ -104,5 +104,5 @@ void Show_HomeScreen()
   */
 
 
-/******************* (C) COPYRIGHT 2012 STMicroelectronics ***************************/ 
+/******************* (C) COPYRIGHT 2012 STMicroelectronics *****END OF FILE****/ 
 

@@ -12,7 +12,7 @@
 *              in any way. We appreciate your understanding and fairness.
 *
 ----------------------------------------------------------------------
-File        : GUILTKFloat.C
+File        : GUIARCFloat.C
 Purpose     : Draw Arc routines based on floating point
 ---------------------------END-OF-HEADER------------------------------
 */

@@ -9,7 +9,7 @@
   ******************************************************************************
   * @attention
   *
-  * COPYRIGHT 2012 STMicroelectronicsCOPYRIGHT
+  * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
   *
   * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
   * You may not use this file except in compliance with the License.
@@ -136,4 +136,4 @@ uint32_t USB_SIL_Read(uint8_t bEpAddr, uint8_t* pBufferPointer)
   return DataLength;
 }
 
-/************************ (C) COPYRIGHT STMicroelectronics ***************************/
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

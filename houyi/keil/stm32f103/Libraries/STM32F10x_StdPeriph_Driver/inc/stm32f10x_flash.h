@@ -16,7 +16,7 @@
   * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
   * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
   *
-  * COPYRIGHT 2011 STMicroelectronicsCOPYRIGHT
+  * <h2><center>&copy; COPYRIGHT 2011 STMicroelectronics</center></h2>
   ******************************************************************************
   */
 
@@ -423,4 +423,4 @@ FLASH_Status FLASH_BootConfig(uint16_t FLASH_BOOT);
   * @}
   */
 
-/******************* (C) COPYRIGHT 2011 STMicroelectronics ***************************/
+/******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

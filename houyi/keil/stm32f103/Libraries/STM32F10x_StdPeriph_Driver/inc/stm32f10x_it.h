@@ -15,7 +15,7 @@
   * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
   * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
   *
-  * COPYRIGHT 2011 STMicroelectronicsCOPYRIGHT
+  * <h2><center>&copy; COPYRIGHT 2011 STMicroelectronics</center></h2>
   ******************************************************************************
   */ 
 
@@ -35,7 +35,7 @@
 /* Exported macro ------------------------------------------------------------*/
 /* Exported variables ------------------------------------------------------------*/
 
-#ifdef LTK_ADC
+#ifdef ARC_ADC
 extern uint16_t volatile ADC1ConvertedValue;
 #endif
 
@@ -64,4 +64,4 @@ void USBWakeUp_IRQHandler(void);
 
 #endif /* __STM32F10x_IT_H */
 
-/******************* (C) COPYRIGHT 2011 STMicroelectronics ***************************/
+/******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

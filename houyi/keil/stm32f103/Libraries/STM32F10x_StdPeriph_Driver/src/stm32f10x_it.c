@@ -17,20 +17,20 @@
   * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
   * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
   *
-  * COPYRIGHT 2011 STMicroelectronicsCOPYRIGHT
+  * <h2><center>&copy; COPYRIGHT 2011 STMicroelectronics</center></h2>
   ******************************************************************************
   */
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
 #include "stm32f10x.h"
-#include "LTK_GPIO.h"
-#include "LTK_USART.h"
-#include "LTK_I2C.h"
-#include "LTK_TouchScreen.h"
-#include "LTK_SysTick.h"
-#include "LTK_LCD.h"
-#ifdef LTK_USB_MOUSE
+#include "ARC_GPIO.h"
+#include "ARC_USART.h"
+#include "ARC_I2C.h"
+#include "ARC_TouchScreen.h"
+#include "ARC_SysTick.h"
+#include "ARC_LCD.h"
+#ifdef ARC_USB_MOUSE
 #include "usb_istr.h"
 #endif
 #include <stdio.h>
@@ -44,7 +44,7 @@
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
 
-#ifdef LTK_ADC
+#ifdef ARC_ADC
 uint16_t volatile ADC1ConvertedValue;
 #endif
 
@@ -125,7 +125,7 @@ void DebugMon_Handler(void)
 {
 }
 
-#ifndef LTK_FREERTOS
+#ifndef ARC_FREERTOS
 /**
   * @brief  This function handles SysTick Handler.
   * @param  None
@@ -133,9 +133,9 @@ void DebugMon_Handler(void)
   */
 void SysTick_Handler(void)
 {
-    if (LTK_Get_TimingDelay() != 0x00)
+    if (ARC_Get_TimingDelay() != 0x00)
     { 
-        LTK_Decrease_TimingDelay();
+        ARC_Decrease_TimingDelay();
     }
 }
 #endif
@@ -227,18 +227,18 @@ void EXTI1_IRQHandler(void)
   */
 void EXTI2_IRQHandler(void)
 {
-#ifdef LTK_BUTTON_EXTI
+#ifdef ARC_BUTTON_EXTI
     if(EXTI_GetITStatus(EXTI_Line2) != RESET)
     {
         /* Toggle LED1 and LED2 */
-        LTK_LED_Toggle(0);
-        LTK_LED_Toggle(1);
+        ARC_LED_Toggle(0);
+        ARC_LED_Toggle(1);
         /* Clear the Key Button EXTI line pending bit */
         EXTI_ClearITPendingBit(EXTI_Line2);
     }
 #endif
 
-#ifdef LTK_IWDG
+#ifdef ARC_IWDG
     if(EXTI_GetITStatus(EXTI_Line2) != RESET)
     {
         IWDG_ReloadCounter();
@@ -246,11 +246,11 @@ void EXTI2_IRQHandler(void)
     }
 #endif
 
-#ifdef LTK_TOUCHSCREEN
+#ifdef ARC_TOUCHSCREEN
     pen_state_struct *pen_st;
     if(EXTI_GetITStatus(EXTI_Line2) != RESET)
     {       
-        pen_st = LTK_get_penstate();
+        pen_st = ARC_get_penstate();
         pen_st->force_adjust = 1;
         EXTI_ClearITPendingBit(EXTI_Line2);
     }
@@ -264,18 +264,18 @@ void EXTI2_IRQHandler(void)
   */
 void EXTI3_IRQHandler(void)
 {
-#ifdef LTK_BUTTON_EXTI
+#ifdef ARC_BUTTON_EXTI
     if(EXTI_GetITStatus(EXTI_Line3) != RESET)
     {
         /* Toggle LED1 and LED2 */
-        LTK_LED_Toggle(0);
-        LTK_LED_Toggle(1);
+        ARC_LED_Toggle(0);
+        ARC_LED_Toggle(1);
         /* Clear the Key Button EXTI line pending bit */
         EXTI_ClearITPendingBit(EXTI_Line3);
     }
 #endif
 
-#ifdef LTK_IWDG
+#ifdef ARC_IWDG
     if(EXTI_GetITStatus(EXTI_Line3) != RESET)
     {
         IWDG_ReloadCounter();
@@ -283,11 +283,11 @@ void EXTI3_IRQHandler(void)
     }
 #endif
 
-#ifdef LTK_TOUCHSCREEN
+#ifdef ARC_TOUCHSCREEN
     pen_state_struct *pen_st;
     if(EXTI_GetITStatus(EXTI_Line3) != RESET)
     {       
-        pen_st = LTK_get_penstate();
+        pen_st = ARC_get_penstate();
         pen_st->force_adjust = 1;
         EXTI_ClearITPendingBit(EXTI_Line3);
     }
@@ -374,7 +374,7 @@ void DMA1_Channel7_IRQHandler(void)
   */
 void ADC1_2_IRQHandler(void)
 {
-#ifdef LTK_ADC
+#ifdef ARC_ADC
 	/* Get injected channel13 converted value */
 	ADC1ConvertedValue = ADC_GetConversionValue(ADC1);
 #endif
@@ -399,7 +399,7 @@ void USB_HP_CAN1_TX_IRQHandler(void)
   */
 void USB_LP_CAN1_RX0_IRQHandler(void)
 {
-#ifdef LTK_USB_MOUSE
+#ifdef ARC_USB_MOUSE
     USB_Istr();
 #endif
 }
@@ -429,12 +429,12 @@ void CAN_SCE_IRQHandler(void)
   */
 void EXTI9_5_IRQHandler(void)
 {
-#if (defined LTK_TOUCHSCREEN && defined LTK_FREERTOS)
+#if (defined ARC_TOUCHSCREEN && defined ARC_FREERTOS)
     pen_state_struct *pen_st;
     portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
     if(EXTI_GetITStatus(EXTI_Line6) != RESET)
     {       
-        pen_st = LTK_get_penstate();
+        pen_st = ARC_get_penstate();
         pen_st->pen_pressed = KEY_DOWN;
         /* 'Give' the semaphore to unblock the task. */
         xSemaphoreGiveFromISR( xBinarySemaphore_ts, &xHigherPriorityTaskWoken );
@@ -456,11 +456,11 @@ void EXTI9_5_IRQHandler(void)
         portEND_SWITCHING_ISR( xHigherPriorityTaskWoken );
     }
 #endif
-#if (defined LTK_TOUCHSCREEN && !defined LTK_FREERTOS)
+#if (defined ARC_TOUCHSCREEN && !defined ARC_FREERTOS)
     pen_state_struct *pen_st;
     if(EXTI_GetITStatus(EXTI_Line6) != RESET)
     {       
-        pen_st = LTK_get_penstate();
+        pen_st = ARC_get_penstate();
         pen_st->pen_pressed = KEY_DOWN;
         EXTI_ClearITPendingBit(EXTI_Line6);
     }
@@ -538,17 +538,17 @@ void TIM4_IRQHandler(void)
   */
 void I2C1_EV_IRQHandler(void)
 {
-#ifdef LTK_I2C_IRQ
+#ifdef ARC_I2C_IRQ
     uint32_t i2cEvent;
     I2C_param_struct __IO *pI2C_param;
 
-    pI2C_param = LTK_get_I2C_param();
+    pI2C_param = ARC_get_I2C_param();
     i2cEvent = I2C_GetLastEvent(I2C1);
     
     switch (i2cEvent)
     {
         case I2C_EVENT_MASTER_MODE_SELECT:/* EV5 */
-            if(pI2C_param->I2C_DIRECTION == LTK_I2C_DIRECTION_TX)
+            if(pI2C_param->I2C_DIRECTION == ARC_I2C_DIRECTION_TX)
             {
                 I2C_Send7bitAddress(I2C1, pI2C_param->DeviceAddr, I2C_Direction_Transmitter);
             }
@@ -584,7 +584,7 @@ void I2C1_EV_IRQHandler(void)
            }
            else
            {
-             pI2C_param->I2C_DIRECTION = LTK_I2C_DIRECTION_RX;
+             pI2C_param->I2C_DIRECTION = ARC_I2C_DIRECTION_RX;
              I2C_ITConfig(I2C1, I2C_IT_BUF, ENABLE);
              I2C_GenerateSTART(I2C1, ENABLE);
            }
@@ -622,7 +622,7 @@ void I2C1_EV_IRQHandler(void)
   */
 void I2C1_ER_IRQHandler(void)
 {
-#ifdef LTK_I2C_IRQ
+#ifdef ARC_I2C_IRQ
     uint32_t __IO SR1Register =0;
 
     /* Read the I2C1 status register */
@@ -742,7 +742,7 @@ void RTCAlarm_IRQHandler(void)
   */
 void USBWakeUp_IRQHandler(void)
 {
-#ifdef LTK_USB_MOUSE
+#ifdef ARC_USB_MOUSE
     EXTI_ClearITPendingBit(EXTI_Line18);
 #endif
 }
@@ -904,4 +904,4 @@ void DMA2_Channel4_5_IRQHandler(void)
   */ 
 
 
-/******************* (C) COPYRIGHT 2011 STMicroelectronics ***************************/
+/******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

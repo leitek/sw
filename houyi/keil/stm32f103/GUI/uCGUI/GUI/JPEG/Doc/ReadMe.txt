@@ -50,7 +50,7 @@ This file contains the following sections:
 OVERVIEW            General description of JPEG and the IJG software.
 LEGAL ISSUES        Copyright, lack of warranty, terms of distribution.
 REFERENCES          Where to learn more about JPEG.
-LTKHIVE LOCATIONS   Where to find newer versions of this software.
+ARCHIVE LOCATIONS   Where to find newer versions of this software.
 RELATED SOFTWARE    Other stuff you should get.
 FILE FORMAT WARS    Software *not* to get.
 TO DO               Plans for future IJG releases.
@@ -73,7 +73,7 @@ Programmer and internal documentation:
 
 Please read at least the files install.doc and usage.doc.  Useful information
 can also be found in the JPEG FAQ (Frequently Asked Questions) article.  See
-LTKHIVE LOCATIONS below to find out where to obtain the FAQ article.
+ARCHIVE LOCATIONS below to find out where to obtain the FAQ article.
 
 If you want to understand how the JPEG code works, we suggest reading one or
 more of the REFERENCES, then looking at the documentation files (in roughly
@@ -296,7 +296,7 @@ uses our library to implement TIFF/JPEG per the Note.  libtiff is available
 from ftp://ftp.sgi.com/graphics/tiff/.
 
 
-LTKHIVE LOCATIONS
+ARCHIVE LOCATIONS
 =================
 
 The "official" archive site for this software is ftp.uu.net (Internet

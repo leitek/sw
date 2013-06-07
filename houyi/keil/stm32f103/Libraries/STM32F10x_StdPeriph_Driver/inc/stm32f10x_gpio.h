@@ -16,7 +16,7 @@
   * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
   * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
   *
-  * COPYRIGHT 2011 STMicroelectronicsCOPYRIGHT
+  * <h2><center>&copy; COPYRIGHT 2011 STMicroelectronics</center></h2>
   ******************************************************************************
   */
 
@@ -382,4 +382,4 @@ void GPIO_ETH_MediaInterfaceConfig(uint32_t GPIO_ETH_MediaInterface);
   * @}
   */
 
-/******************* (C) COPYRIGHT 2011 STMicroelectronics ***************************/
+/******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

@@ -306,7 +306,7 @@ int ff_del_syncobj (_SYNC_t);		/* Delete a sync object */
 #define	AM_VOL	0x08	/* Volume label */
 #define AM_LFN	0x0F	/* LFN entry */
 #define AM_DIR	0x10	/* Directory */
-#define AM_LTK	0x20	/* Archive */
+#define AM_ARC	0x20	/* Archive */
 #define AM_MASK	0x3F	/* Mask of defined bits */
 
 
