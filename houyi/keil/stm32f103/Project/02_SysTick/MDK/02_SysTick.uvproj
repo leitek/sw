@@ -136,6 +136,7 @@
             <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
             <RestoreFunctions>0</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
+            <RestoreTracepoints>0</RestoreTracepoints>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
           <TargetSelection>7</TargetSelection>
@@ -164,6 +165,7 @@
             <Capability>1</Capability>
             <DriverSelection>4099</DriverSelection>
           </Flash1>
+          <bUseTDR>0</bUseTDR>
           <Flash2>Segger\JL2CM3.dll</Flash2>
           <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
@@ -344,6 +346,7 @@
             <Rwpi>0</Rwpi>
             <wLevel>0</wLevel>
             <uThumb>0</uThumb>
+            <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_MD</Define>
@@ -359,6 +362,7 @@
             <SplitLS>0</SplitLS>
             <SwStkChk>0</SwStkChk>
             <NoWarn>0</NoWarn>
+            <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -399,24 +403,24 @@
           <GroupName>ARC_Utilities</GroupName>
           <Files>
             <File>
-              <FileName>ARC_GPIO.c</FileName>
+              <FileName>LTK_GPIO.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\Utilities\GPIO\ARC_GPIO.c</FilePath>
+              <FilePath>..\..\..\Utilities\GPIO\LTK_GPIO.c</FilePath>
             </File>
             <File>
-              <FileName>ARC_LED.c</FileName>
+              <FileName>LTK_LED.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\Utilities\LED\ARC_LED.c</FilePath>
+              <FilePath>..\..\..\Utilities\LED\LTK_LED.c</FilePath>
             </File>
             <File>
-              <FileName>ARC_RCC.c</FileName>
+              <FileName>LTK_RCC.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\Utilities\RCC\ARC_RCC.c</FilePath>
+              <FilePath>..\..\..\Utilities\RCC\LTK_RCC.c</FilePath>
             </File>
             <File>
-              <FileName>ARC_SysTick.c</FileName>
+              <FileName>LTK_SysTick.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\Utilities\SysTick\ARC_SysTick.c</FilePath>
+              <FilePath>..\..\..\Utilities\SysTick\LTK_SysTick.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -459,9 +463,9 @@
           <GroupName>MDK-ARM</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32f10x_md.s</FileName>
+              <FileName>startup_stm32f10x_hd.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm\startup_stm32f10x_md.s</FilePath>
+              <FilePath>..\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm\startup_stm32f10x_hd.s</FilePath>
             </File>
           </Files>
         </Group>

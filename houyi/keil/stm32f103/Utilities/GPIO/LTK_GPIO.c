@@ -15,7 +15,7 @@
   
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "arc_GPIO.h"
+#include "LTK_GPIO.h"
 
 /** @addtogroup Utilities
   * @{

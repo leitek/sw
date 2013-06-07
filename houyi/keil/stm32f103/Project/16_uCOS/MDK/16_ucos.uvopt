@@ -75,7 +75,7 @@
         <tvExpOptDlg>0</tvExpOptDlg>
         <IsCurrentTarget>1</IsCurrentTarget>
       </OPTFL>
-      <CpuCode>0</CpuCode>
+      <CpuCode>255</CpuCode>
       <DllOpt>
         <SimDllName>SARMCM3.DLL</SimDllName>
         <SimDllArguments></SimDllArguments>
@@ -103,6 +103,7 @@
         <tRmem>1</tRmem>
         <tRfunc>0</tRfunc>
         <tRbox>1</tRbox>
+        <tRtrace>0</tRtrace>
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
         <nTsel>7</nTsel>
@@ -148,6 +149,9 @@
           <ItemText>win</ItemText>
         </Mm>
       </MemoryWindow1>
+      <Tracepoint>
+        <THDelay>0</THDelay>
+      </Tracepoint>
       <DebugFlag>
         <trace>0</trace>
         <periodic>0</periodic>
@@ -184,6 +188,7 @@
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>1</GroupNumber>
       <FileNumber>1</FileNumber>
@@ -197,6 +202,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\ucos_main.c</PathWithFileName>
       <FilenameWithoutPath>ucos_main.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
   </Group>
 
@@ -205,6 +212,7 @@
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>2</GroupNumber>
       <FileNumber>2</FileNumber>
@@ -218,6 +226,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\Utilities\RCC\ARC_RCC.c</PathWithFileName>
       <FilenameWithoutPath>ARC_RCC.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
@@ -232,6 +242,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\Utilities\GPIO\ARC_GPIO.c</PathWithFileName>
       <FilenameWithoutPath>ARC_GPIO.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
@@ -246,6 +258,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\Utilities\LED\ARC_LED.c</PathWithFileName>
       <FilenameWithoutPath>ARC_LED.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
   </Group>
 
@@ -254,6 +268,7 @@
     <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>3</GroupNumber>
       <FileNumber>5</FileNumber>
@@ -267,6 +282,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_rcc.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
@@ -281,6 +298,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_gpio.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
   </Group>
 
@@ -289,6 +308,7 @@
     <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>4</GroupNumber>
       <FileNumber>7</FileNumber>
@@ -302,6 +322,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.c</PathWithFileName>
       <FilenameWithoutPath>core_cm3.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>4</GroupNumber>
@@ -316,6 +338,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c</PathWithFileName>
       <FilenameWithoutPath>system_stm32f10x.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
   </Group>
 
@@ -324,6 +348,7 @@
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>5</GroupNumber>
       <FileNumber>9</FileNumber>
@@ -337,6 +362,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm\startup_stm32f10x_md.s</PathWithFileName>
       <FilenameWithoutPath>startup_stm32f10x_md.s</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
   </Group>
 
@@ -345,6 +372,7 @@
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>6</GroupNumber>
       <FileNumber>10</FileNumber>
@@ -358,6 +386,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Source\os_cfg_app.c</PathWithFileName>
       <FilenameWithoutPath>os_cfg_app.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -372,6 +402,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Source\os_core.c</PathWithFileName>
       <FilenameWithoutPath>os_core.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -386,6 +418,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Source\os_dbg.c</PathWithFileName>
       <FilenameWithoutPath>os_dbg.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -400,6 +434,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Source\os_flag.c</PathWithFileName>
       <FilenameWithoutPath>os_flag.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -414,6 +450,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Source\os_int.c</PathWithFileName>
       <FilenameWithoutPath>os_int.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -428,6 +466,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Source\os_mem.c</PathWithFileName>
       <FilenameWithoutPath>os_mem.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -442,6 +482,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Source\os_msg.c</PathWithFileName>
       <FilenameWithoutPath>os_msg.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -456,6 +498,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Source\os_mutex.c</PathWithFileName>
       <FilenameWithoutPath>os_mutex.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -470,6 +514,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Source\os_pend_multi.c</PathWithFileName>
       <FilenameWithoutPath>os_pend_multi.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -484,6 +530,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Source\os_prio.c</PathWithFileName>
       <FilenameWithoutPath>os_prio.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -498,6 +546,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Source\os_q.c</PathWithFileName>
       <FilenameWithoutPath>os_q.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -512,6 +562,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Source\os_sem.c</PathWithFileName>
       <FilenameWithoutPath>os_sem.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -526,6 +578,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Source\os_stat.c</PathWithFileName>
       <FilenameWithoutPath>os_stat.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -540,6 +594,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Source\os_task.c</PathWithFileName>
       <FilenameWithoutPath>os_task.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -554,6 +610,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Source\os_tick.c</PathWithFileName>
       <FilenameWithoutPath>os_tick.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -568,6 +626,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Source\os_time.c</PathWithFileName>
       <FilenameWithoutPath>os_time.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -582,6 +642,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Source\os_tmr.c</PathWithFileName>
       <FilenameWithoutPath>os_tmr.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -596,6 +658,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Source\os_var.c</PathWithFileName>
       <FilenameWithoutPath>os_var.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -610,6 +674,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Ports\ARM-Cortex-M3\Generic\MDK\os_cpu_c.c</PathWithFileName>
       <FilenameWithoutPath>os_cpu_c.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -624,6 +690,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uCOS-III\Ports\ARM-Cortex-M3\Generic\MDK\os_cpu_a.s</PathWithFileName>
       <FilenameWithoutPath>os_cpu_a.s</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
   </Group>
 
@@ -632,6 +700,7 @@
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>7</GroupNumber>
       <FileNumber>30</FileNumber>
@@ -645,6 +714,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uC-CPU\cpu_core.c</PathWithFileName>
       <FilenameWithoutPath>cpu_core.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>7</GroupNumber>
@@ -659,6 +730,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uC-CPU\ARM-Cortex-M3\MDK\cpu_c.c</PathWithFileName>
       <FilenameWithoutPath>cpu_c.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>7</GroupNumber>
@@ -673,6 +746,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uC-CPU\ARM-Cortex-M3\MDK\cpu_a.s</PathWithFileName>
       <FilenameWithoutPath>cpu_a.s</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
   </Group>
 
@@ -681,6 +756,7 @@
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>8</GroupNumber>
       <FileNumber>33</FileNumber>
@@ -694,6 +770,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uC-LIB\lib_math.c</PathWithFileName>
       <FilenameWithoutPath>lib_math.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
@@ -708,6 +786,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uC-LIB\lib_ascii.c</PathWithFileName>
       <FilenameWithoutPath>lib_ascii.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
@@ -722,6 +802,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uC-LIB\lib_mem.c</PathWithFileName>
       <FilenameWithoutPath>lib_mem.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
@@ -736,6 +818,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uC-LIB\lib_str.c</PathWithFileName>
       <FilenameWithoutPath>lib_str.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>8</GroupNumber>
@@ -750,6 +834,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uC-LIB\Ports\ARM-Cortex-M3\MDK\lib_mem_a.s</PathWithFileName>
       <FilenameWithoutPath>lib_mem_a.s</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
   </Group>
 
@@ -758,6 +844,7 @@
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>9</GroupNumber>
       <FileNumber>38</FileNumber>
@@ -771,6 +858,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rtos\uCOS\uC-BSP\bsp.c</PathWithFileName>
       <FilenameWithoutPath>bsp.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
   </Group>
 
@@ -779,6 +868,7 @@
     <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
   </Group>
 
 </ProjectOpt>

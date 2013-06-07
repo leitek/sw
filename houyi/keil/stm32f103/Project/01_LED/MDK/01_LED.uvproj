@@ -403,19 +403,19 @@
           <GroupName>ARC_Utilities</GroupName>
           <Files>
             <File>
-              <FileName>ARC_GPIO.c</FileName>
+              <FileName>LTK_GPIO.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\Utilities\GPIO\ARC_GPIO.c</FilePath>
+              <FilePath>..\..\..\Utilities\GPIO\LTK_GPIO.c</FilePath>
             </File>
             <File>
-              <FileName>ARC_LED.c</FileName>
+              <FileName>LTK_LED.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\Utilities\LED\ARC_LED.c</FilePath>
+              <FilePath>..\..\..\Utilities\LED\LTK_LED.c</FilePath>
             </File>
             <File>
-              <FileName>ARC_RCC.c</FileName>
+              <FileName>LTK_RCC.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\Utilities\RCC\ARC_RCC.c</FilePath>
+              <FilePath>..\..\..\Utilities\RCC\LTK_RCC.c</FilePath>
             </File>
           </Files>
         </Group>
