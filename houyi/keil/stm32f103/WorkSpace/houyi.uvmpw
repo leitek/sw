@@ -9,14 +9,12 @@
 
   <project>
     <PathAndName>..\Project\01_LED\MDK\01_LED.uvproj</PathAndName>
-    <NodeIsExpanded>1</NodeIsExpanded>
+    <NodeIsActive>1</NodeIsActive>
     <NodeIsCheckedInBatchBuild>1</NodeIsCheckedInBatchBuild>
   </project>
 
   <project>
     <PathAndName>..\Project\02_SysTick\MDK\02_SysTick.uvproj</PathAndName>
-    <NodeIsActive>1</NodeIsActive>
-    <NodeIsExpanded>1</NodeIsExpanded>
     <NodeIsCheckedInBatchBuild>1</NodeIsCheckedInBatchBuild>
   </project>
 
@@ -102,7 +100,6 @@
 
   <project>
     <PathAndName>..\Project\19_uCGUI\MDK\19_uCGUI.uvproj</PathAndName>
-    <NodeIsExpanded>1</NodeIsExpanded>
     <NodeIsCheckedInBatchBuild>1</NodeIsCheckedInBatchBuild>
   </project>
 
@@ -112,8 +109,7 @@
   </project>
 
   <project>
-    <PathAndName>..\Project\platform_check\MDK\Pangu_Platform_check.uvproj</PathAndName>
-    <NodeIsExpanded>1</NodeIsExpanded>
+    <PathAndName>..\Project\platform_check\MDK\houyi_Platform_check.uvproj</PathAndName>
     <NodeIsCheckedInBatchBuild>1</NodeIsCheckedInBatchBuild>
   </project>
 

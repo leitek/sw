@@ -400,7 +400,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>ARC_Utilities</GroupName>
+          <GroupName>LTK_Utilities</GroupName>
           <Files>
             <File>
               <FileName>LTK_GPIO.c</FileName>
