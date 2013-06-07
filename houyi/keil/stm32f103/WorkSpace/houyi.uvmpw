@@ -9,7 +9,6 @@
 
   <project>
     <PathAndName>..\Project\01_LED\MDK\01_LED.uvproj</PathAndName>
-    <NodeIsActive>1</NodeIsActive>
     <NodeIsCheckedInBatchBuild>1</NodeIsCheckedInBatchBuild>
   </project>
 
@@ -45,6 +44,8 @@
 
   <project>
     <PathAndName>..\Project\08_ADC\MDK\08_ADC.uvproj</PathAndName>
+    <NodeIsActive>1</NodeIsActive>
+    <NodeIsExpanded>1</NodeIsExpanded>
     <NodeIsCheckedInBatchBuild>1</NodeIsCheckedInBatchBuild>
   </project>
 

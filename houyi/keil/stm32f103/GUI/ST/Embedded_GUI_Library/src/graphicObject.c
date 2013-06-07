@@ -4220,7 +4220,7 @@ void TimeOutCalculate(void)
   */
 void GL_Delay(uint32_t nTime)
 {
-    ARC_SysTick_Delay(nTime * 10);
+    LTK_SysTick_Delay(nTime * 10);
 }
 
 /**

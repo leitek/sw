@@ -25,7 +25,7 @@ GUITouch.conf.h (Should be located in the Config\ directory).
 #include <string.h>
 #include "LCD_Private.h"      /* private modul definitions & config */
 #include "GUI_Protected.h"
-#include "ARC_TouchScreen.h"
+#include "LTK_TouchScreen.h"
 
 /* Generate code only if configuration says so ! */
 #if GUI_SUPPORT_TOUCH
@@ -220,10 +220,10 @@ void GUI_TOUCH_GetCalData(int Coord, int* pMin,int* pMax) {
 void GUI_TOUCH_Exec(void) {
   #ifndef WIN32
   pen_state_struct *pen_st;
-  pen_st = ARC_get_penstate();
+  pen_st = LTK_get_penstate();
   /* calculate Min / Max values */
   
-  if(ARC_TouchScreen_Rd_LCD_XY())
+  if(LTK_TouchScreen_Rd_LCD_XY())
   {
       _StoreUnstable(pen_st->x_converted, pen_st->y_converted);
   }

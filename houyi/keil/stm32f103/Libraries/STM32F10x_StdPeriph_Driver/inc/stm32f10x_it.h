@@ -35,7 +35,7 @@
 /* Exported macro ------------------------------------------------------------*/
 /* Exported variables ------------------------------------------------------------*/
 
-#ifdef ARC_ADC
+#ifdef LTK_ADC
 extern uint16_t volatile ADC1ConvertedValue;
 #endif
 
