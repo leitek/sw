@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    LED_main.c 
-  * @author  armrunc (www.armrunc.com)
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   main program body.
   ******************************************************************************
@@ -9,21 +9,21 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_LED.h"
-/** @addtogroup ARC_Examples
+#include "LTK_LED.h"
+/** @addtogroup LTK_Examples
   * @{
   */
 
-/** @addtogroup ARC_GPIO
+/** @addtogroup LTK_GPIO
   * @{
   */
 
-/** @addtogroup ARC_GPIO_IOToggle
+/** @addtogroup LTK_GPIO_IOToggle
   * @{
   */
 
@@ -44,14 +44,14 @@
 int main(void)
 {
     uint32_t i;
-    ARC_LED_Init();
+    LTK_LED_Init();
     while (1)
     {
-        ARC_LED_Set(0, 1);
-        ARC_LED_Set(1, 0);
+        LTK_LED_Set(0, 1);
+        LTK_LED_Set(1, 0);
         for( i = 0; i < 5000000; i++);        
-        ARC_LED_Set(0, 0);
-        ARC_LED_Set(1, 1);
+        LTK_LED_Set(0, 0);
+        LTK_LED_Set(1, 1);
         for( i = 0; i < 5000000; i++);        
     }
 }
@@ -69,4 +69,4 @@ int main(void)
   */
 
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    USART_main.c 
-  * @author  armrunc (www.armrunc.com)
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   main program body.
   ******************************************************************************
@@ -9,20 +9,20 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_USART.h"
-#include "ARC_SysTick.h"
-#include "ARC_Retarget.h"
+#include "LTK_USART.h"
+#include "LTK_SysTick.h"
+#include "LTK_Retarget.h"
 
-/** @addtogroup ARC_Examples
+/** @addtogroup LTK_Examples
   * @{
   */
 
-/** @addtogroup ARC_USART
+/** @addtogroup LTK_USART
   * @{
   */
 
@@ -42,7 +42,7 @@
 int main(void)
 {
     char str[80];
-    ARC_COM_Init();
+    LTK_COM_Init();
     /* Enable USART */
     USART_Cmd(USART1, ENABLE);
 
@@ -62,4 +62,4 @@ int main(void)
   * @}
   */
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

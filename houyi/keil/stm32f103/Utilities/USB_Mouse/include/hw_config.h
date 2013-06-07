@@ -34,4 +34,4 @@ void Get_SerialNum(void);
 
 #endif  /*__HW_CONFIG_H*/
 
-/******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
+/******************* (C) COPYRIGHT 2011 STMicroelectronics ***************************/

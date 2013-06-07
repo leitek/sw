@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
-  * @file    ARC_SysTick.h
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_SysTick.h
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   Header files for middleware.
   ******************************************************************************
@@ -9,19 +9,19 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __ARC_SYSTICK_H
-#define __ARC_SYSTICK_H
+#ifndef __LTK_SYSTICK_H
+#define __LTK_SYSTICK_H
 
 #ifdef __cplusplus
  extern "C" {
 #endif 
 
 /* Includes ------------------------------------------------------------------*/
-#ifdef ARC_FREERTOS
+#ifdef LTK_FREERTOS
 #include "FreeRTOS.h"
 #include "task.h"
 #endif
@@ -29,7 +29,7 @@
   * @{
   */ 
 
-/** @addtogroup ARC_SYSTICK
+/** @addtogroup LTK_SYSTICK
   * @{
   */
 
@@ -60,14 +60,14 @@
 /** @defgroup SYSTICK_Exported_Functions
   * @{
   */
-#ifndef ARC_FREERTOS
-void ARC_SysTick_Delay(__IO uint32_t nTime);
-void ARC_SysTick_Init(void);
-void ARC_Set_TimingDelay(uint32_t __IO timing_Delay);
-uint32_t ARC_Get_TimingDelay(void);
-void ARC_Decrease_TimingDelay(void);
+#ifndef LTK_FREERTOS
+void LTK_SysTick_Delay(__IO uint32_t nTime);
+void LTK_SysTick_Init(void);
+void LTK_Set_TimingDelay(uint32_t __IO timing_Delay);
+uint32_t LTK_Get_TimingDelay(void);
+void LTK_Decrease_TimingDelay(void);
 #else
-#define ARC_SysTick_Delay vTaskDelay
+#define LTK_SysTick_Delay vTaskDelay
 #endif
 /**
   * @}
@@ -79,7 +79,7 @@ void ARC_Decrease_TimingDelay(void);
 #endif
 
 
-#endif /* __ARC_SYSTICK_H */
+#endif /* __LTK_SYSTICK_H */
 
 /**
   * @}
@@ -90,4 +90,4 @@ void ARC_Decrease_TimingDelay(void);
   */ 
  
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

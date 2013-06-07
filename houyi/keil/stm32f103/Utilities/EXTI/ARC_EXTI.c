@@ -1,16 +1,16 @@
 /**
   ******************************************************************************
-  * @file    ARC_EXTI.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_EXTI.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides EXTI middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Includes ------------------------------------------------------------------*/
@@ -21,11 +21,11 @@
   * @{
   */ 
 
-/** @addtogroup ARC_EXTI
+/** @addtogroup LTK_EXTI
   * @{
   */ 
 
-/** @defgroup ARC_EXTI_Private_TypesDefinitions
+/** @defgroup LTK_EXTI_Private_TypesDefinitions
   * @{
   */
 
@@ -33,7 +33,7 @@
   * @}
   */
 
-/** @defgroup ARC_EXTI_Private_Defines
+/** @defgroup LTK_EXTI_Private_Defines
   * @{
   */
 
@@ -41,7 +41,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_EXTI_Private_Macros
+/** @defgroup LTK_EXTI_Private_Macros
   * @{
   */ 
 
@@ -49,7 +49,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_EXTI_Private_Variables
+/** @defgroup LTK_EXTI_Private_Variables
   * @{
   */ 
 
@@ -57,7 +57,7 @@
   * @}
   */
 
-/** @defgroup ARC_EXTI_Private_FunctionPrototypes
+/** @defgroup LTK_EXTI_Private_FunctionPrototypes
   * @{
   */
 
@@ -65,7 +65,7 @@
   * @}
   */
 
-/** @defgroup ARC_EXTI_Private_Functions
+/** @defgroup LTK_EXTI_Private_Functions
   * @{
   */
 
@@ -74,7 +74,7 @@
   * @param  None
   * @retval None
   */
-void ARC_Button_EXTI_Init(void)
+void LTK_Button_EXTI_Init(void)
 {
     EXTI_InitTypeDef EXTI_InitStructure;
 
@@ -102,7 +102,7 @@ void ARC_Button_EXTI_Init(void)
   * @param  None
   * @retval None
   */
-void ARC_TouchScreen_EXTI_Init(void)
+void LTK_TouchScreen_EXTI_Init(void)
 {
     EXTI_InitTypeDef EXTI_InitStructure;
 
@@ -122,7 +122,7 @@ void ARC_TouchScreen_EXTI_Init(void)
   * @param  None
   * @retval None
   */
-void ARC_USB_EXTI_Init(void)
+void LTK_USB_EXTI_Init(void)
 {
     EXTI_InitTypeDef EXTI_InitStructure;
     
@@ -147,5 +147,4 @@ void ARC_USB_EXTI_Init(void)
   * @}
   */ 
     
-    
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

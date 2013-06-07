@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    TIM_PWM_main.c 
-  * @author  armrunc (www.armrunc.com)
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   main program body.
   ******************************************************************************
@@ -9,18 +9,18 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_TIM_PWM.h"
+#include "LTK_TIM_PWM.h"
 
-/** @addtogroup ARC_Examples
+/** @addtogroup LTK_Examples
   * @{
   */
 
-/** @addtogroup ARC_TIM_PWM
+/** @addtogroup LTK_TIM_PWM
   * @{
   */
 
@@ -38,7 +38,7 @@
   */
 int main(void)
 {
-    ARC_TIM_PWM_Init();
+    LTK_TIM_PWM_Init();
     /* TIM2 enable counter */
     TIM_Cmd(TIM2, ENABLE);
     
@@ -55,4 +55,4 @@ int main(void)
   * @}
   */
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

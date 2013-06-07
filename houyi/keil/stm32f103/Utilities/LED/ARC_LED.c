@@ -1,33 +1,33 @@
 /**
   ******************************************************************************
-  * @file    ARC_LED.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_LED.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides LED middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_LED.h"
-#include "ARC_RCC.h"
-#include "ARC_GPIO.h"
+#include "LTK_LED.h"
+#include "LTK_RCC.h"
+#include "LTK_GPIO.h"
 
 /** @addtogroup Utilities
   * @{
   */ 
 
-/** @addtogroup ARC_LED
+/** @addtogroup LTK_LED
   * @{
   */ 
 
-/** @defgroup ARC_LED_Private_TypesDefinitions
+/** @defgroup LTK_LED_Private_TypesDefinitions
   * @{
   */
 
@@ -35,7 +35,7 @@
   * @}
   */
 
-/** @defgroup ARC_LED_Private_Defines
+/** @defgroup LTK_LED_Private_Defines
   * @{
   */
 
@@ -43,7 +43,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_LED_Private_Macros
+/** @defgroup LTK_LED_Private_Macros
   * @{
   */ 
 
@@ -51,7 +51,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_LED_Private_Variables
+/** @defgroup LTK_LED_Private_Variables
   * @{
   */ 
 
@@ -59,7 +59,7 @@
   * @}
   */
 
-/** @defgroup ARC_LED_Private_FunctionPrototypes
+/** @defgroup LTK_LED_Private_FunctionPrototypes
   * @{
   */
 
@@ -67,7 +67,7 @@
   * @}
   */
 
-/** @defgroup ARC_LED_Private_Functions
+/** @defgroup LTK_LED_Private_Functions
   * @{
   */
   
@@ -76,10 +76,10 @@
   * @param  None
   * @retval None
   */
-void ARC_LED_Init()
+void LTK_LED_Init()
 {
-    ARC_LED_RCC_Init();
-    ARC_LED_GPIO_Init();
+    LTK_LED_RCC_Init();
+    LTK_LED_GPIO_Init();
 }
 
 /**
@@ -88,7 +88,7 @@ void ARC_LED_Init()
   * @param  value: the output of LED0/LED1, either 0 or 1.
   * @retval None
   */
-void ARC_LED_Set(uint8_t LED, uint8_t value)
+void LTK_LED_Set(uint8_t LED, uint8_t value)
 {
     if (LED == 0)
     {
@@ -111,7 +111,7 @@ void ARC_LED_Set(uint8_t LED, uint8_t value)
   * @param  LED: Indicate the LED number, either 0 or 1.
   * @retval None
   */
-void ARC_LED_Toggle(uint8_t LED)
+void LTK_LED_Toggle(uint8_t LED)
 {
     if(LED == 0)
         GPIOA->ODR ^= GPIO_Pin_1;
@@ -132,4 +132,4 @@ void ARC_LED_Toggle(uint8_t LED)
   * @}
   */  
     
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

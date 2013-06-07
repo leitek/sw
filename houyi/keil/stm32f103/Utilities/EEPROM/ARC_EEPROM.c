@@ -1,33 +1,33 @@
 /**
   ******************************************************************************
-  * @file    ARC_EEPROM.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_EEPROM.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides EEPROM middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_EEPROM.h"
-#include "ARC_SysTick.h"
-#include "ARC_I2C.h"
+#include "LTK_EEPROM.h"
+#include "LTK_SysTick.h"
+#include "LTK_I2C.h"
 
 /** @addtogroup Utilities
   * @{
   */ 
 
-/** @addtogroup ARC_EEPROM
+/** @addtogroup LTK_EEPROM
   * @{
   */ 
 
-/** @defgroup ARC_EEPROM_Private_TypesDefinitions
+/** @defgroup LTK_EEPROM_Private_TypesDefinitions
   * @{
   */
 
@@ -35,7 +35,7 @@
   * @}
   */
 
-/** @defgroup ARC_EEPROM_Private_Defines
+/** @defgroup LTK_EEPROM_Private_Defines
   * @{
   */
 
@@ -43,7 +43,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_EEPROM_Private_Macros
+/** @defgroup LTK_EEPROM_Private_Macros
   * @{
   */ 
 
@@ -51,7 +51,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_EEPROM_Private_Variables
+/** @defgroup LTK_EEPROM_Private_Variables
   * @{
   */ 
 
@@ -59,7 +59,7 @@
   * @}
   */
 
-/** @defgroup ARC_EEPROM_Private_FunctionPrototypes
+/** @defgroup LTK_EEPROM_Private_FunctionPrototypes
   * @{
   */
 
@@ -67,7 +67,7 @@
   * @}
   */
 
-/** @defgroup ARC_EEPROM_Private_Functions
+/** @defgroup LTK_EEPROM_Private_Functions
   * @{
   */
 
@@ -78,18 +78,18 @@
   * @param  EEPSize: the buffer size
   * @retval None
   */ 
-void ARC_EEPROM_Write(uint8_t *EEPBuff, uint32_t SubAdd, uint32_t EEPSize)
+void LTK_EEPROM_Write(uint8_t *EEPBuff, uint32_t SubAdd, uint32_t EEPSize)
 {
     uint8_t i = 0;
-    ARC_I2C_Init();
+    LTK_I2C_Init();
     for ( i = 0; i < EEPSize; i++)
     {
         I2C_param_struct __IO *pI2C_param;
 
-        pI2C_param = ARC_get_I2C_param();
+        pI2C_param = LTK_get_I2C_param();
 
-        pI2C_param->I2C_DIRECTION = ARC_I2C_DIRECTION_TX;
-        pI2C_param->DeviceAddr = ARC_EEPROM_ADDR;
+        pI2C_param->I2C_DIRECTION = LTK_I2C_DIRECTION_TX;
+        pI2C_param->DeviceAddr = LTK_EEPROM_ADDR;
         
         pI2C_param->SubAddr = SubAdd + i;
         pI2C_param->TxData = EEPBuff + i;
@@ -97,10 +97,10 @@ void ARC_EEPROM_Write(uint8_t *EEPBuff, uint32_t SubAdd, uint32_t EEPSize)
         pI2C_param->TX_I2C_Index = 0;
         pI2C_param->TX_Generate_stop = 1;
         
-        ARC_I2C_Write(I2C1, pI2C_param);
-        ARC_SysTick_Delay(20);
+        LTK_I2C_Write(I2C1, pI2C_param);
+        LTK_SysTick_Delay(20);
     }
-    ARC_I2C_DeInit();
+    LTK_I2C_DeInit();
 }
 
 /**
@@ -110,14 +110,14 @@ void ARC_EEPROM_Write(uint8_t *EEPBuff, uint32_t SubAdd, uint32_t EEPSize)
   * @param  EEPSize: the buffer size
   * @retval None
   */ 
-void ARC_EEPROM_Read(uint8_t *RXEEPBuff, uint32_t SubAdd, uint32_t EEPSize)
+void LTK_EEPROM_Read(uint8_t *RXEEPBuff, uint32_t SubAdd, uint32_t EEPSize)
 {
     I2C_param_struct __IO *pI2C_param;
-    ARC_I2C_Init();
-    pI2C_param = ARC_get_I2C_param();
+    LTK_I2C_Init();
+    pI2C_param = LTK_get_I2C_param();
 
-    pI2C_param->I2C_DIRECTION = ARC_I2C_DIRECTION_TX;
-    pI2C_param->DeviceAddr = ARC_EEPROM_ADDR;
+    pI2C_param->I2C_DIRECTION = LTK_I2C_DIRECTION_TX;
+    pI2C_param->DeviceAddr = LTK_EEPROM_ADDR;
     
     pI2C_param->SubAddr = SubAdd;
     pI2C_param->TxNumOfBytes = 0;
@@ -128,10 +128,10 @@ void ARC_EEPROM_Read(uint8_t *RXEEPBuff, uint32_t SubAdd, uint32_t EEPSize)
     pI2C_param->RxNumOfBytes = EEPSize;
     pI2C_param->RX_I2C_Index = 0;
     
-    ARC_I2C_Write(I2C1, pI2C_param);
+    LTK_I2C_Write(I2C1, pI2C_param);
     
-    ARC_SysTick_Delay(100);
-    ARC_I2C_DeInit();
+    LTK_SysTick_Delay(100);
+    LTK_I2C_DeInit();
 }
 
 /**
@@ -146,4 +146,4 @@ void ARC_EEPROM_Read(uint8_t *RXEEPBuff, uint32_t SubAdd, uint32_t EEPSize)
   * @}
   */  
     
-/******************* (C) www.armrunc.com *****END OF FILE****/ 
+/****************************** leitek.taobao.com *****************************/ 

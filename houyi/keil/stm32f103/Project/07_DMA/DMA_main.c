@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    DAM_main.c 
-  * @author  armrunc (www.armrunc.com)
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   main program body.
   ******************************************************************************
@@ -9,22 +9,22 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_RCC.h"
-#include "ARC_USART.h"
-#include "ARC_DMA.h"
-#include "ARC_SysTick.h"
+#include "LTK_RCC.h"
+#include "LTK_USART.h"
+#include "LTK_DMA.h"
+#include "LTK_SysTick.h"
 #include "stdio.h"
 
-/** @addtogroup ARC_Examples
+/** @addtogroup LTK_Examples
   * @{
   */
 
-/** @addtogroup ARC_DAM
+/** @addtogroup LTK_DAM
   * @{
   */
 
@@ -45,10 +45,10 @@ int main(void)
     uint8_t CharDMA[] = "Memory to USART DMA example\n";
     uint32_t CharCount = sizeof(CharDMA) - 1;
 
-    ARC_COM_Init();
+    LTK_COM_Init();
     USART_Cmd(USART1, ENABLE);
-    ARC_DMA1_RCC_Init();
-    ARC_DMA1_Ch4_Param_Init(CharDMA, CharCount);
+    LTK_DMA1_RCC_Init();
+    LTK_DMA1_Ch4_Param_Init(CharDMA, CharCount);
 
     USART_DMACmd(USART1, USART_DMAReq_Tx, ENABLE);
 
@@ -67,4 +67,4 @@ int main(void)
   * @}
   */
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

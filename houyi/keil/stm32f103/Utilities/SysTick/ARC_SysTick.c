@@ -1,22 +1,22 @@
 /**
   ******************************************************************************
-  * @file    ARC_SysTick.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_SysTick.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides SysTick middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_SysTick.h"
-#ifdef ARC_FREERTOS
+#include "LTK_SysTick.h"
+#ifdef LTK_FREERTOS
 #include "FreeRTOS.h"
 #include "task.h"
 #endif
@@ -25,7 +25,7 @@
   * @{
   */ 
 
-/** @addtogroup ARC_SYSTICK
+/** @addtogroup LTK_SYSTICK
   * @{
   */ 
       
@@ -75,13 +75,13 @@ static uint32_t __IO TimingDelay;
   * @{
   */
 
-#ifndef ARC_FREERTOS
+#ifndef LTK_FREERTOS
 /**
   * @brief  Setup SysTick Timer as 1 msec interrupts
   * @param  None
   * @retval None
   */
-void ARC_SysTick_Init()
+void LTK_SysTick_Init()
 {
     if (SysTick_Config(SystemCoreClock / 1000))
     { 
@@ -95,11 +95,11 @@ void ARC_SysTick_Init()
   * @param  nTime: specifies the delay time length, in milliseconds.
   * @retval None
   */
-void ARC_SysTick_Delay(__IO uint32_t nTime)
+void LTK_SysTick_Delay(__IO uint32_t nTime)
 { 
-    ARC_Set_TimingDelay( nTime );
+    LTK_Set_TimingDelay( nTime );
 
-    while(ARC_Get_TimingDelay() != 0);
+    while(LTK_Get_TimingDelay() != 0);
 }
 
 /**
@@ -107,7 +107,7 @@ void ARC_SysTick_Delay(__IO uint32_t nTime)
   * @param  timing_Delay
   * @retval None
   */
-void ARC_Set_TimingDelay(uint32_t __IO timing_Delay)
+void LTK_Set_TimingDelay(uint32_t __IO timing_Delay)
 {
     TimingDelay = timing_Delay;
 }
@@ -117,7 +117,7 @@ void ARC_Set_TimingDelay(uint32_t __IO timing_Delay)
   * @param  None
   * @retval Current TimingDelay
   */
-uint32_t ARC_Get_TimingDelay()
+uint32_t LTK_Get_TimingDelay()
 {
     return TimingDelay;
 }
@@ -127,7 +127,7 @@ uint32_t ARC_Get_TimingDelay()
   * @param  None
   * @retval Current TimingDelay
   */
-void ARC_Decrease_TimingDelay()
+void LTK_Decrease_TimingDelay()
 {
     TimingDelay--;
 }
@@ -145,4 +145,4 @@ void ARC_Decrease_TimingDelay()
   * @}
   */ 
     
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

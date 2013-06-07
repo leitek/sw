@@ -53,4 +53,4 @@ extern uint8_t Joystick_StringSerial[JOYSTICK_SIZ_STRING_SERIAL];
 
 #endif /* __USB_DESC_H */
 
-/******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
+/******************* (C) COPYRIGHT 2011 STMicroelectronics ***************************/

@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    Fatfs_main.c 
-  * @author  armrunc (www.armrunc.com)
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   main program body.
   ******************************************************************************
@@ -9,26 +9,26 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_Fatfs.h"
-#include "ARC_SD.h"
-#include "ARC_USART.h"
-#include "ARC_SysTick.h"
-#include "ARC_SPI_Flash.h"
-#include "ARC_TouchScreen.h"
-#include "ARC_RCC.h"
+#include "LTK_Fatfs.h"
+#include "LTK_SD.h"
+#include "LTK_USART.h"
+#include "LTK_SysTick.h"
+#include "LTK_SPI_Flash.h"
+#include "LTK_TouchScreen.h"
+#include "LTK_RCC.h"
 #include "diskio.h"
 #include <stdio.h>
 
-/** @addtogroup ARC_Examples
+/** @addtogroup LTK_Examples
   * @{
   */
 
-/** @addtogroup ARC_SD
+/** @addtogroup LTK_SD
   * @{
   */
 
@@ -48,20 +48,20 @@
   */
 int main(void)
 {
-    ARC_SysTick_Init();
-    ARC_COM_Init();
+    LTK_SysTick_Init();
+    LTK_COM_Init();
     USART_Cmd(USART1, ENABLE);
     
-    ARC_SD_SPI_Init();
+    LTK_SD_SPI_Init();
     
     SPI_Cmd(SPI1, ENABLE); /*!< SD_SPI enable */
     
-    ARC_DMA1_RCC_Init();
+    LTK_DMA1_RCC_Init();
     
     while (1)
     {
-        ARC_fat_menu_init();
-        ARC_SysTick_Delay(1000);
+        LTK_fat_menu_init();
+        LTK_SysTick_Delay(1000);
     }  
 }
 
@@ -73,4 +73,4 @@ int main(void)
   * @}
   */
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

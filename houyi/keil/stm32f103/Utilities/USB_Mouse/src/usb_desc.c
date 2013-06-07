@@ -8,7 +8,7 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+  * COPYRIGHT 2012 STMicroelectronicsCOPYRIGHT
   *
   * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
   * You may not use this file except in compliance with the License.
@@ -215,7 +215,7 @@ const uint8_t Joystick_StringVendor[JOYSTICK_SIZ_STRING_VENDOR] =
 {
     JOYSTICK_SIZ_STRING_VENDOR, /* Size of Vendor string */
     USB_STRING_DESCRIPTOR_TYPE,  /* bDescriptorType*/
-    /* Manufacturer: "ARC" */
+    /* Manufacturer: "LTK" */
     'A', 0, 'R', 0, 'C', 0
 };
 
@@ -233,5 +233,5 @@ uint8_t Joystick_StringSerial[JOYSTICK_SIZ_STRING_SERIAL] =
     'A', 0, 'R', 0, 'C', 0, ' ', 0, ' ', 0, ' ', 0, ' ', 0
 };
 
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+/************************ (C) COPYRIGHT STMicroelectronics ***************************/
 

@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    RTC_main.c 
-  * @author  armrunc (www.armrunc.com)
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   main program body.
   ******************************************************************************
@@ -9,25 +9,25 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_LED.h"
-#include "ARC_RTC.h"
-#include "ARC_Systick.h"
-#include "ARC_USART.h"
+#include "LTK_LED.h"
+#include "LTK_RTC.h"
+#include "LTK_Systick.h"
+#include "LTK_USART.h"
 #include "stdio.h"
-/** @addtogroup ARC_Examples
+/** @addtogroup LTK_Examples
   * @{
   */
 
-/** @addtogroup ARC_GPIO
+/** @addtogroup LTK_GPIO
   * @{
   */
 
-/** @addtogroup ARC_GPIO_IOToggle
+/** @addtogroup LTK_GPIO_IOToggle
   * @{
   */
 
@@ -48,14 +48,14 @@
 int main(void)
 {
     RTC_t rtc;
-    ARC_RTC_Init();
-    ARC_SysTick_Init();
-    ARC_COM_Init();
+    LTK_RTC_Init();
+    LTK_SysTick_Init();
+    LTK_COM_Init();
     USART_Cmd(USART1, ENABLE);
     while (1)
     {
-        ARC_RTC_gettime(&rtc);
-        ARC_SysTick_Delay(1000);
+        LTK_RTC_gettime(&rtc);
+        LTK_SysTick_Delay(1000);
         printf("%d-%d-%d %d:%d:%d\n", rtc.year, rtc.month, rtc.mday, rtc.hour, rtc.min, rtc.sec);
     }
 }
@@ -73,4 +73,4 @@ int main(void)
   */
 
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

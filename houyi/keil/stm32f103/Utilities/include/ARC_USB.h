@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
-  * @file    ARC_USB.h
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_USB.h
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   Header files for middleware.
   ******************************************************************************
@@ -9,12 +9,12 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __ARC_USB_H
-#define __ARC_USB_H
+#ifndef __LTK_USB_H
+#define __LTK_USB_H
 
 #ifdef __cplusplus
  extern "C" {
@@ -26,19 +26,11 @@
   * @{
   */ 
 
-/** @addtogroup ARC_USB
+/** @addtogroup LTK_USB
   * @{
   */
 
-/** @defgroup ARC_USB_Exported_Types
-  * @{
-  */
-
-/**
-  * @}
-  */
-
-/** @defgroup ARC_USB_Exported_Constants
+/** @defgroup LTK_USB_Exported_Types
   * @{
   */
 
@@ -46,7 +38,7 @@
   * @}
   */
 
-/** @defgroup ARC_USB_Exported_Macros
+/** @defgroup LTK_USB_Exported_Constants
   * @{
   */
 
@@ -54,10 +46,18 @@
   * @}
   */
 
-/** @defgroup ARC_USB_Exported_Functions
+/** @defgroup LTK_USB_Exported_Macros
   * @{
   */
-void ARC_USB_Init(void); 
+
+/**
+  * @}
+  */
+
+/** @defgroup LTK_USB_Exported_Functions
+  * @{
+  */
+void LTK_USB_Init(void); 
  
 /**
   * @}
@@ -69,7 +69,7 @@ void ARC_USB_Init(void);
 #endif
 
 
-#endif /* __ARC_USB_H */
+#endif /* __LTK_USB_H */
 
 /**
   * @}
@@ -80,4 +80,4 @@ void ARC_USB_Init(void);
   */ 
  
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

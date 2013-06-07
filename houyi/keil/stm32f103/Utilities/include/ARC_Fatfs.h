@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
-  * @file    ARC_Fatfs.h
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_Fatfs.h
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   Header files for middleware.
   ******************************************************************************
@@ -9,12 +9,12 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __ARC_FATFS_H
-#define __ARC_FATFS_H
+#ifndef __LTK_FATFS_H
+#define __LTK_FATFS_H
 
 #ifdef __cplusplus
  extern "C" {
@@ -27,19 +27,11 @@
   * @{
   */ 
 
-/** @addtogroup ARC_FATFS
+/** @addtogroup LTK_FATFS
   * @{
   */
 
-/** @defgroup ARC_FATFS_Exported_Types
-  * @{
-  */
-
-/**
-  * @}
-  */
-
-/** @defgroup ARC_FATFS_Exported_Constants
+/** @defgroup LTK_FATFS_Exported_Types
   * @{
   */
 
@@ -47,7 +39,15 @@
   * @}
   */
 
-/** @defgroup ARC_FATFS_Exported_Macros
+/** @defgroup LTK_FATFS_Exported_Constants
+  * @{
+  */
+
+/**
+  * @}
+  */
+
+/** @defgroup LTK_FATFS_Exported_Macros
   * @{
   */
 #define FI 1
@@ -56,22 +56,22 @@
   * @}
   */
 
-/** @defgroup ARC_FATFS_Exported_Functions
+/** @defgroup LTK_FATFS_Exported_Functions
   * @{
   */
 
-void ARC_fat_menu_init(void);
+void LTK_fat_menu_init(void);
 
-void ARC_Sys_Soft_Reset(void);
+void LTK_Sys_Soft_Reset(void);
 
-void ARC_format_disk(void);
-void ARC_creat_file(void);
-void ARC_delete_file(void);
-void ARC_list_file(void);
-void ARC_get_disk_info(void);
-void ARC_creat_dir(void);
-void ARC_edit_file(void);
-void ARC_read_file(void);
+void LTK_format_disk(void);
+void LTK_creat_file(void);
+void LTK_delete_file(void);
+void LTK_list_file(void);
+void LTK_get_disk_info(void);
+void LTK_creat_dir(void);
+void LTK_edit_file(void);
+void LTK_read_file(void);
 
 /**
   * @}
@@ -83,7 +83,7 @@ void ARC_read_file(void);
 #endif
 
 
-#endif /* __ARC_FATFS_H */
+#endif /* __LTK_FATFS_H */
 
 /**
   * @}
@@ -93,4 +93,4 @@ void ARC_read_file(void);
   * @}
   */ 
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

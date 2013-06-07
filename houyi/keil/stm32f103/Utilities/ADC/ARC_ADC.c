@@ -1,34 +1,34 @@
 /**
   ******************************************************************************
-  * @file    ARC_ADC.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_ADC.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides ADC middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_ADC.h"
-#include "ARC_GPIO.h"
-#include "ARC_RCC.h"
-#include "ARC_NVIC_API.h"
+#include "LTK_ADC.h"
+#include "LTK_GPIO.h"
+#include "LTK_RCC.h"
+#include "LTK_NVIC_API.h"
 
 /** @addtogroup Utilities
   * @{
   */ 
 
-/** @addtogroup ARC_ADC
+/** @addtogroup LTK_ADC
   * @{
   */ 
 
-/** @defgroup ARC_ADC_Private_TypesDefinitions
+/** @defgroup LTK_ADC_Private_TypesDefinitions
   * @{
   */
 
@@ -36,7 +36,7 @@
   * @}
   */
 
-/** @defgroup ARC_ADC_Private_Defines
+/** @defgroup LTK_ADC_Private_Defines
   * @{
   */
 
@@ -44,7 +44,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_ADC_Private_Macros
+/** @defgroup LTK_ADC_Private_Macros
   * @{
   */ 
 
@@ -52,7 +52,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_ADC_Private_Variables
+/** @defgroup LTK_ADC_Private_Variables
   * @{
   */ 
 
@@ -60,7 +60,7 @@
   * @}
   */
 
-/** @defgroup ARC_ADC_Private_FunctionPrototypes
+/** @defgroup LTK_ADC_Private_FunctionPrototypes
   * @{
   */
 
@@ -68,7 +68,7 @@
   * @}
   */
 
-/** @defgroup ARC_ADC_Private_Functions
+/** @defgroup LTK_ADC_Private_Functions
   * @{
   */
 
@@ -77,7 +77,7 @@
   * @param  None
   * @retval None
   */
-void ARC_ADC_PARAM_Init()
+void LTK_ADC_PARAM_Init()
 {
     ADC_InitTypeDef ADC_InitStructure;
 
@@ -96,12 +96,12 @@ void ARC_ADC_PARAM_Init()
   * @param  None
   * @retval None
   */
-void ARC_ADC_Init()
+void LTK_ADC_Init()
 {
-    ARC_ADC_RCC_Init();
-    ARC_ADC_GPIO_Init();
-    ARC_ADC_PARAM_Init();
-    ARC_ADC_NVIC_Init();
+    LTK_ADC_RCC_Init();
+    LTK_ADC_GPIO_Init();
+    LTK_ADC_PARAM_Init();
+    LTK_ADC_NVIC_Init();
     /* ADC1 regular channels configuration */
     ADC_RegularChannelConfig(ADC1, ADC_Channel_12, 1, ADC_SampleTime_55Cycles5);
     /* Enable ADC1 EOC interrupt */
@@ -120,4 +120,4 @@ void ARC_ADC_Init()
   * @}
   */  
     
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/******************* leitek.taobao.com **************************/

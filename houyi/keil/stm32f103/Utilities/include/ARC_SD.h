@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
-  * @file    ARC_SD.h
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_SD.h
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   Header files for middleware.
   ******************************************************************************
@@ -9,12 +9,12 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __ARC_SD_H
-#define __ARC_SD_H
+#ifndef __LTK_SD_H
+#define __LTK_SD_H
 
 #ifdef __cplusplus
  extern "C" {
@@ -26,11 +26,11 @@
   * @{
   */ 
 
-/** @addtogroup ARC_SD
+/** @addtogroup LTK_SD
   * @{
   */
 
-/** @defgroup ARC_SD_Exported_Types
+/** @defgroup LTK_SD_Exported_Types
   * @{
   */
 
@@ -84,7 +84,7 @@ typedef enum
   * @}
   */
 
-/** @defgroup ARC_SD_Exported_Constants
+/** @defgroup LTK_SD_Exported_Constants
   * @{
   */
 
@@ -183,7 +183,7 @@ typedef enum
   * @}
   */
 
-/** @defgroup ARC_SD_Exported_Macros
+/** @defgroup LTK_SD_Exported_Macros
   * @{
   */
   
@@ -191,14 +191,14 @@ typedef enum
   * @}
   */
 
-/** @defgroup ARC_SD_Exported_Functions
+/** @defgroup LTK_SD_Exported_Functions
   * @{
   */
 
-void ARC_SD_SPI_Init(void);
-SD_Card_Type ARC_SD_SPI_Start(void);
-uint8_t ARC_sd_send_command(uint8_t, uint32_t, SD_Response, uint8_t *);
-uint8_t ARC_SD_SPI_ReadBlock(uint8_t *buff, uint32_t byteTransfer);
+void LTK_SD_SPI_Init(void);
+SD_Card_Type LTK_SD_SPI_Start(void);
+uint8_t LTK_sd_send_command(uint8_t, uint32_t, SD_Response, uint8_t *);
+uint8_t LTK_SD_SPI_ReadBlock(uint8_t *buff, uint32_t byteTransfer);
 
 /**
   * @}
@@ -210,7 +210,7 @@ uint8_t ARC_SD_SPI_ReadBlock(uint8_t *buff, uint32_t byteTransfer);
 #endif
 
 
-#endif /* __ARC_SD_H */
+#endif /* __LTK_SD_H */
 
 /**
   * @}
@@ -221,4 +221,4 @@ uint8_t ARC_SD_SPI_ReadBlock(uint8_t *buff, uint32_t byteTransfer);
   */ 
  
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

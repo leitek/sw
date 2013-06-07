@@ -66,4 +66,4 @@ uint8_t *Joystick_GetHIDDescriptor(uint16_t Length);
 
 #endif /* __USB_PROP_H */
 
-/******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
+/******************* (C) COPYRIGHT 2011 STMicroelectronics ***************************/

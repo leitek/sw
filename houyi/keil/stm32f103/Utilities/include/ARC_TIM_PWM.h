@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
-  * @file    ARC_TIM_PWM.h
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_TIM_PWM.h
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   Header files for middleware.
   ******************************************************************************
@@ -9,12 +9,12 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __ARC_TIM_PWM_H
-#define __ARC_TIM_PWM_H
+#ifndef __LTK_TIM_PWM_H
+#define __LTK_TIM_PWM_H
 
 #ifdef __cplusplus
  extern "C" {
@@ -26,19 +26,11 @@
   * @{
   */ 
 
-/** @addtogroup ARC_TIM_PWM
+/** @addtogroup LTK_TIM_PWM
   * @{
   */
 
-/** @defgroup ARC_TIM_PWM_Exported_Types
-  * @{
-  */
-
-/**
-  * @}
-  */
-
-/** @defgroup ARC_TIM_PWM_Exported_Constants
+/** @defgroup LTK_TIM_PWM_Exported_Types
   * @{
   */
 
@@ -46,7 +38,7 @@
   * @}
   */
 
-/** @defgroup ARC_TIM_PWM_Exported_Macros
+/** @defgroup LTK_TIM_PWM_Exported_Constants
   * @{
   */
 
@@ -54,10 +46,18 @@
   * @}
   */
 
-/** @defgroup ARC_TIM_PWM_Exported_Functions
+/** @defgroup LTK_TIM_PWM_Exported_Macros
   * @{
   */
-void ARC_TIM_PWM_Init(void);
+
+/**
+  * @}
+  */
+
+/** @defgroup LTK_TIM_PWM_Exported_Functions
+  * @{
+  */
+void LTK_TIM_PWM_Init(void);
   
 /**
   * @}
@@ -69,7 +69,7 @@ void ARC_TIM_PWM_Init(void);
 #endif
 
 
-#endif /* __ARC_TIM_PWM_H */
+#endif /* __LTK_TIM_PWM_H */
 
 /**
   * @}
@@ -80,4 +80,4 @@ void ARC_TIM_PWM_Init(void);
   */ 
  
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

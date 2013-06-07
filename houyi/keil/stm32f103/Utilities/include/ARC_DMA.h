@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
-  * @file    ARC_DAM.h
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_DAM.h
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   Header files for middleware.
   ******************************************************************************
@@ -9,12 +9,12 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __ARC_DAM_H
-#define __ARC_DAM_H
+#ifndef __LTK_DAM_H
+#define __LTK_DAM_H
 
 #ifdef __cplusplus
  extern "C" {
@@ -26,19 +26,11 @@
   * @{
   */ 
 
-/** @addtogroup ARC_DAM
+/** @addtogroup LTK_DAM
   * @{
   */
 
-/** @defgroup ARC_DAM_Exported_Types
-  * @{
-  */
-
-/**
-  * @}
-  */
-
-/** @defgroup ARC_DAM_Exported_Constants
+/** @defgroup LTK_DAM_Exported_Types
   * @{
   */
 
@@ -46,7 +38,7 @@
   * @}
   */
 
-/** @defgroup ARC_DAM_Exported_Macros
+/** @defgroup LTK_DAM_Exported_Constants
   * @{
   */
 
@@ -54,12 +46,20 @@
   * @}
   */
 
-/** @defgroup ARC_DAM_Exported_Functions
+/** @defgroup LTK_DAM_Exported_Macros
   * @{
   */
-void ARC_DMA1_Ch2_Param_Init(const uint8_t *MemoryBaseAddr, uint32_t BufferSize);
-void ARC_DMA1_Ch3_Param_Init(const uint8_t *MemoryBaseAddr, uint32_t BufferSize, uint32_t memIncEnable);
-void ARC_DMA1_Ch4_Param_Init(const uint8_t *MemoryBaseAddr, uint32_t BufferSize);
+
+/**
+  * @}
+  */
+
+/** @defgroup LTK_DAM_Exported_Functions
+  * @{
+  */
+void LTK_DMA1_Ch2_Param_Init(const uint8_t *MemoryBaseAddr, uint32_t BufferSize);
+void LTK_DMA1_Ch3_Param_Init(const uint8_t *MemoryBaseAddr, uint32_t BufferSize, uint32_t memIncEnable);
+void LTK_DMA1_Ch4_Param_Init(const uint8_t *MemoryBaseAddr, uint32_t BufferSize);
 
 /**
   * @}
@@ -71,7 +71,7 @@ void ARC_DMA1_Ch4_Param_Init(const uint8_t *MemoryBaseAddr, uint32_t BufferSize)
 #endif
 
 
-#endif /* __ARC_DAM_H */
+#endif /* __LTK_DAM_H */
 
 /**
   * @}
@@ -81,4 +81,4 @@ void ARC_DMA1_Ch4_Param_Init(const uint8_t *MemoryBaseAddr, uint32_t BufferSize)
   * @}
   */ 
  
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

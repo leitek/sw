@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
-  * @file    ARC_RTC.h
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_RTC.h
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   Header files for middleware.
   ******************************************************************************
@@ -9,12 +9,12 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __ARC_RTC_H
-#define __ARC_RTC_H
+#ifndef __LTK_RTC_H
+#define __LTK_RTC_H
 
 #ifdef __cplusplus
  extern "C" {
@@ -26,11 +26,11 @@
   * @{
   */ 
 
-/** @addtogroup ARC_RTC
+/** @addtogroup LTK_RTC
   * @{
   */
 
-/** @defgroup ARC_RTC_Exported_Types
+/** @defgroup LTK_RTC_Exported_Types
   * @{
   */
 typedef struct 
@@ -49,7 +49,7 @@ typedef struct
   * @}
   */
 
-/** @defgroup ARC_RTC_Exported_Constants
+/** @defgroup LTK_RTC_Exported_Constants
   * @{
   */
 
@@ -57,7 +57,7 @@ typedef struct
   * @}
   */
 
-/** @defgroup ARC_RTC_Exported_Macros
+/** @defgroup LTK_RTC_Exported_Macros
   * @{
   */
 
@@ -65,12 +65,12 @@ typedef struct
   * @}
   */
 
-/** @defgroup ARC_RTC_Exported_Functions
+/** @defgroup LTK_RTC_Exported_Functions
   * @{
   */
-void ARC_RTC_Init(void); 
-void ARC_RTC_gettime (RTC_t*);              /* Get time */
-void ARC_RTC_settime (const RTC_t*);        /* Set time */
+void LTK_RTC_Init(void); 
+void LTK_RTC_gettime (RTC_t*);              /* Get time */
+void LTK_RTC_settime (const RTC_t*);        /* Set time */
 
  
 /**
@@ -83,7 +83,7 @@ void ARC_RTC_settime (const RTC_t*);        /* Set time */
 #endif
 
 
-#endif /* __ARC_RTC_H */
+#endif /* __LTK_RTC_H */
 
 /**
   * @}
@@ -93,4 +93,4 @@ void ARC_RTC_settime (const RTC_t*);        /* Set time */
   * @}
   */ 
  
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

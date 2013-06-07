@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    LCD_main.c 
-  * @author  armrunc (www.armrunc.com)
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   main program body.
   ******************************************************************************
@@ -9,20 +9,20 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_SysTick.h"
-#include "ARC_LCD.h"
-#include "ARC_USART.h"
+#include "LTK_SysTick.h"
+#include "LTK_LCD.h"
+#include "LTK_USART.h"
 
-/** @addtogroup ARC_Examples
+/** @addtogroup LTK_Examples
   * @{
   */
 
-/** @addtogroup ARC_LCD
+/** @addtogroup LTK_LCD
   * @{
   */
 
@@ -41,45 +41,45 @@
 int main(void)
 {
     uint16_t x = 0;
-    ARC_SysTick_Init();
+    LTK_SysTick_Init();
     
-    ARC_COM_Init();
+    LTK_COM_Init();
     USART_Cmd(USART1, ENABLE);
     
-    ARC_LCD_Init();
-    ARC_LCD_On();
+    LTK_LCD_Init();
+    LTK_LCD_On();
     while(1) 
     {
         switch(x)
         {
             case 0:
-                ARC_LCD_Clear(LCD_COLOR_BLACK);
+                LTK_LCD_Clear(LCD_COLOR_BLACK);
                 break;
             case 1:
-                ARC_LCD_Clear(LCD_COLOR_MAGENTA);
+                LTK_LCD_Clear(LCD_COLOR_MAGENTA);
                 break;
             case 2:
-                ARC_LCD_Clear(LCD_COLOR_GREEN);
+                LTK_LCD_Clear(LCD_COLOR_GREEN);
                 break;
             case 3:
-                ARC_LCD_Clear(LCD_COLOR_RED);
+                LTK_LCD_Clear(LCD_COLOR_RED);
                 break;
             case 4:
-                ARC_LCD_Clear(LCD_COLOR_BLUE);
+                LTK_LCD_Clear(LCD_COLOR_BLUE);
                 break;
         }
         
         x++;
         x = (x > 4) ? 0 : x;
 
-        ARC_LCD_ShowString(30, 50, "ARC STM32");
+        LTK_LCD_ShowString(30, 50, "LTK STM32");
 
-        ARC_LCD_ShowString(30, 70, "TFT LCD Example");
+        LTK_LCD_ShowString(30, 70, "TFT LCD Example");
         
-        ARC_LCD_ShowString(30, 90, "www.armrunc.com");
+        LTK_LCD_ShowString(30, 90, "leitek.taobao.com");
         
-        ARC_LCD_ShowString(30, 110, "http://armrunc.taobao.com");
-        ARC_SysTick_Delay(2000);
+        LTK_LCD_ShowString(30, 110, "http://leitek.taobao.com");
+        LTK_SysTick_Delay(2000);
     }                                               
 }
 
@@ -91,4 +91,4 @@ int main(void)
   * @}
   */
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
-  * @file    ARC_LCD.h
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_LCD.h
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   Header files for middleware.
   ******************************************************************************
@@ -9,12 +9,12 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __ARC_LCD_H
-#define __ARC_LCD_H
+#ifndef __LTK_LCD_H
+#define __LTK_LCD_H
 
 #ifdef __cplusplus
  extern "C" {
@@ -26,11 +26,11 @@
   * @{
   */ 
 
-/** @addtogroup ARC_LCD
+/** @addtogroup LTK_LCD
   * @{
   */
 
-/** @defgroup ARC_LCD_Exported_Types
+/** @defgroup LTK_LCD_Exported_Types
   * @{
   */
 
@@ -39,7 +39,7 @@ typedef enum
     LCD_I80 = 0, 
     LCD_FSMC = 1, 
     LCD_BUSTYPE_OTHER = 2
-}ARC_LCD_BusType;
+}LTK_LCD_BusType;
 
 /** 
   * @brief  LCD_Direction_TypeDef enumeration definition  
@@ -60,20 +60,20 @@ typedef enum
     LCD_HX8312      = 0x8312,
     LCD_HX8347A     = 0X0047,   
     LCD_OTHER       = 0xffff
-}ARC_LCD_TYPE;
+}LTK_LCD_TYPE;
 
 typedef struct
 {
-    ARC_LCD_TYPE LCD_Type;
-    ARC_LCD_BusType LCD_BusType;
+    LTK_LCD_TYPE LCD_Type;
+    LTK_LCD_BusType LCD_BusType;
     LCD_Direction_TypeDef LCD_Direction;
-}ARC_LCD_Params;
+}LTK_LCD_Params;
 
 /**
   * @}
   */
 
-/** @defgroup ARC_LCD_Exported_Variables
+/** @defgroup LTK_LCD_Exported_Variables
   * @{
   */
 
@@ -81,7 +81,7 @@ typedef struct
   * @}
   */
 
-/** @defgroup ARC_LCD_Exported_Constants
+/** @defgroup LTK_LCD_Exported_Constants
   * @{
   */
 
@@ -219,7 +219,7 @@ typedef struct
 #define LCD_COLOR_CYAN              0x7FFF
 #define LCD_COLOR_YELLOW            0xFFE0
 
-#if !(defined ARC_UCGUI && defined ARC_FREERTOS)
+#if !(defined LTK_UCGUI && defined LTK_FREERTOS)
 #define LCD_XSIZE                   240
 #define LCD_YSIZE                   320
 #endif
@@ -229,7 +229,7 @@ typedef struct
   * @}
   */
 
-/** @defgroup ARC_LCD_Exported_Macros
+/** @defgroup LTK_LCD_Exported_Macros
   * @{
   */
 
@@ -237,18 +237,18 @@ typedef struct
   * @}
   */
 
-/** @defgroup ARC_LCD_Exported_Functions
+/** @defgroup LTK_LCD_Exported_Functions
   * @{
   */
-ARC_LCD_Params *ARC_LCD_get_param(void);
-void ARC_LCD_WriteReg(uint16_t LCD_Reg, uint16_t LCD_RegValue);
-uint16_t ARC_LCD_ReadReg(uint16_t LCD_Index);
-int32_t ARC_LCD_Init(void);
-void ARC_LCD_On(void);
-void ARC_LCD_ShowString(int32_t x, int32_t y, const uint8_t *lcd_font);
-void ARC_LCD_Clear(uint16_t Color);
-void ARC_LCD_DrawBigPoint(uint16_t x,uint16_t y, uint16_t pointColor);
-void ARC_LCD_DrawCross(uint16_t x, uint16_t y, uint16_t pointColor);
+LTK_LCD_Params *LTK_LCD_get_param(void);
+void LTK_LCD_WriteReg(uint16_t LCD_Reg, uint16_t LCD_RegValue);
+uint16_t LTK_LCD_ReadReg(uint16_t LCD_Index);
+int32_t LTK_LCD_Init(void);
+void LTK_LCD_On(void);
+void LTK_LCD_ShowString(int32_t x, int32_t y, const uint8_t *lcd_font);
+void LTK_LCD_Clear(uint16_t Color);
+void LTK_LCD_DrawBigPoint(uint16_t x,uint16_t y, uint16_t pointColor);
+void LTK_LCD_DrawCross(uint16_t x, uint16_t y, uint16_t pointColor);
 /**
   * @}
   */
@@ -259,7 +259,7 @@ void ARC_LCD_DrawCross(uint16_t x, uint16_t y, uint16_t pointColor);
 #endif
 
 
-#endif /* __ARC_LCD_H */
+#endif /* __LTK_LCD_H */
 
 /**
   * @}
@@ -270,4 +270,4 @@ void ARC_LCD_DrawCross(uint16_t x, uint16_t y, uint16_t pointColor);
   */ 
  
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

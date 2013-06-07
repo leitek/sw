@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    uCGUI_main.c 
-  * @author  armrunc (www.armrunc.com)
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   main program body.
   ******************************************************************************
@@ -9,17 +9,17 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_SysTick.h"
-#include "ARC_LCD.h"
-#include "ARC_USART.h"
-#include "ARC_TouchScreen.h"
-#include "ARC_SPI_Flash.h"
-#include "ARC_Button_EXTI.h"
+#include "LTK_SysTick.h"
+#include "LTK_LCD.h"
+#include "LTK_USART.h"
+#include "LTK_TouchScreen.h"
+#include "LTK_SPI_Flash.h"
+#include "LTK_Button_EXTI.h"
 #include "FreeRTOS.h"
 #include "task.h"
 #include "GUIDEMO.h"
@@ -27,11 +27,11 @@
 #include <stdlib.h>
 #include <assert.h>
 
-/** @addtogroup ARC_Examples
+/** @addtogroup LTK_Examples
   * @{
   */
 
-/** @addtogroup ARC_TS
+/** @addtogroup LTK_TS
   * @{
   */
 
@@ -48,8 +48,8 @@
 void InitTask ( void *pvParameters )
 {
     portBASE_TYPE task_error;
-    ARC_Button_Init();
-    ARC_COM_Init();
+    LTK_Button_Init();
+    LTK_COM_Init();
     USART_Cmd(USART1, ENABLE);
     
     task_error = xTaskCreate(uCGUI, "uCGUI task", (1 * 1024), NULL, 8, NULL );
@@ -82,4 +82,4 @@ int main(void)
   * @}
   */
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

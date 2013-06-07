@@ -27,9 +27,9 @@ Purpose     : Several GUIDEMO routines
 #endif
 #include "GUIDEMO.h"
 #include "stm32f10x.h"
-#include "ARC_SysTick.h"
-#include "ARC_TouchScreen.h"
-#include "ARC_LCD.h"
+#include "LTK_SysTick.h"
+#include "LTK_TouchScreen.h"
+#include "LTK_LCD.h"
 #include <assert.h>
 #include <stdio.h>
 
@@ -75,7 +75,7 @@ static fVoidVoid * _apfTest[] = {
   GUIDEMO_Graph,
   #endif
   //GUIDEMO_Bitmap,
-  #ifndef ARC_I2C_IRQ
+  #ifndef LTK_I2C_IRQ
   GUIDEMO_Cursor,
   //GUIDEMO_ShowInternationalFonts,
   GUIDEMO_ShowColorBar,
@@ -93,7 +93,7 @@ static fVoidVoid * _apfTest[] = {
     //GUIDEMO_DemoFrameWin,
     //GUIDEMO_Dialog,
     //GUIDEMO_WM,
-    #if defined GUI_SUPPORT_TOUCH && !defined ARC_I2C_IRQ
+    #if defined GUI_SUPPORT_TOUCH && !defined LTK_I2C_IRQ
       GUIDEMO_Touch,
     #endif
   #endif
@@ -396,20 +396,20 @@ void GUIDEMO_main(void) {
 void uCGUI ( void *pvParameters )
 {
     portBASE_TYPE task_error;
-    ARC_LCD_Params *lcd_par;
+    LTK_LCD_Params *lcd_par;
     GUI_Init();
-    lcd_par = ARC_LCD_get_param();
+    lcd_par = LTK_LCD_get_param();
     printf("LCD type: 0x%.4x\n", lcd_par->LCD_Type);
-    ARC_TouchScreen_Init();
+    LTK_TouchScreen_Init();
     SPI_Cmd(SPI1, ENABLE);
-    ARC_TouchScreen_start();
+    LTK_TouchScreen_start();
     task_error = xTaskCreate(Touchscreen, "TS task", (500), NULL, 8, NULL );
     assert( task_error == pdPASS);
     
     while(1)
     {
         GUIDEMO_main();
-        ARC_SysTick_Delay(100);
+        LTK_SysTick_Delay(100);
     }
 }
 

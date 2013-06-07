@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    I2C_main.c 
-  * @author  armrunc (www.armrunc.com)
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   main program body.
   ******************************************************************************
@@ -9,22 +9,22 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_I2C.h"
-#include "ARC_EEPROM.h"
-#include "ARC_USART.h"
-#include "ARC_SysTick.h"
+#include "LTK_I2C.h"
+#include "LTK_EEPROM.h"
+#include "LTK_USART.h"
+#include "LTK_SysTick.h"
 #include <stdio.h>
 
-/** @addtogroup ARC_Examples
+/** @addtogroup LTK_Examples
   * @{
   */
 
-/** @addtogroup ARC_USART
+/** @addtogroup LTK_USART
   * @{
   */
 
@@ -42,26 +42,26 @@
   */
 int main(void)
 {
-    uint8_t TxBuffer[] = "ARC STM32, I2C example.";
+    uint8_t TxBuffer[] = "LTK STM32, I2C example.";
     uint8_t RxBuffer[100] = "EEPROM not present\n";
     uint16_t Buffer_Size = sizeof(TxBuffer) / sizeof(*(TxBuffer));
 
     
-    ARC_SysTick_Init();
-    ARC_COM_Init();
+    LTK_SysTick_Init();
+    LTK_COM_Init();
     USART_Cmd(USART1, ENABLE);
-    ARC_I2C_Init();
+    LTK_I2C_Init();
     I2C_Cmd(I2C1, ENABLE);
     
-    ARC_EEPROM_Write(TxBuffer, 0, Buffer_Size);
+    LTK_EEPROM_Write(TxBuffer, 0, Buffer_Size);
     
-    ARC_EEPROM_Read(RxBuffer, 0, Buffer_Size);
+    LTK_EEPROM_Read(RxBuffer, 0, Buffer_Size);
       
     while(1)
     {
         printf("TX: %s\n", TxBuffer);
         printf("RX: %s\n", RxBuffer);
-        ARC_SysTick_Delay(1000);
+        LTK_SysTick_Delay(1000);
     }
 }
 
@@ -73,4 +73,4 @@ int main(void)
   * @}
   */
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

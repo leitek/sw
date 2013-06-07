@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
-  * @file    ARC_I2C.h
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_I2C.h
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   Header files for middleware.
   ******************************************************************************
@@ -9,12 +9,12 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __ARC_I2C_H
-#define __ARC_I2C_H
+#ifndef __LTK_I2C_H
+#define __LTK_I2C_H
 
 #ifdef __cplusplus
  extern "C" {
@@ -26,11 +26,11 @@
   * @{
   */ 
 
-/** @addtogroup ARC_I2C
+/** @addtogroup LTK_I2C
   * @{
   */
 
-/** @defgroup ARC_I2C_Exported_Types
+/** @defgroup LTK_I2C_Exported_Types
   * @{
   */
 
@@ -69,22 +69,22 @@ typedef struct
   * @}
   */
 
-/** @defgroup ARC_I2C_Exported_Constants
+/** @defgroup LTK_I2C_Exported_Constants
   * @{
   */
   
-#define ARC_I2C_DIRECTION_TX                 0
-#define ARC_I2C_DIRECTION_RX                 1
-#define ARC_EEPROM_ADDR                      0xA0
-#define ARC_I2C_FLAG_MASK                    0xFFFFFF
-#define ARC_I2C_SR2_SHIFT                    16
+#define LTK_I2C_DIRECTION_TX                 0
+#define LTK_I2C_DIRECTION_RX                 1
+#define LTK_EEPROM_ADDR                      0xA0
+#define LTK_I2C_FLAG_MASK                    0xFFFFFF
+#define LTK_I2C_SR2_SHIFT                    16
 
 
 /**
   * @}
   */
 
-/** @defgroup ARC_I2C_Exported_Macros
+/** @defgroup LTK_I2C_Exported_Macros
   * @{
   */
 
@@ -92,15 +92,15 @@ typedef struct
   * @}
   */
 
-/** @defgroup ARC_I2C_Exported_Functions
+/** @defgroup LTK_I2C_Exported_Functions
   * @{
   */
-void ARC_I2C_Init(void);
-void ARC_I2C_DeInit(void);
-void ARC_I2C_Write(I2C_TypeDef *I2Cx, I2C_param_struct __IO *I2C_param);
-void ARC_I2C_Read(I2C_TypeDef* I2Cx, I2C_param_struct __IO *I2C_param);
-void ARC_set_I2C_param(I2C_param_struct *I2C_param);
-I2C_param_struct __IO *ARC_get_I2C_param(void);
+void LTK_I2C_Init(void);
+void LTK_I2C_DeInit(void);
+void LTK_I2C_Write(I2C_TypeDef *I2Cx, I2C_param_struct __IO *I2C_param);
+void LTK_I2C_Read(I2C_TypeDef* I2Cx, I2C_param_struct __IO *I2C_param);
+void LTK_set_I2C_param(I2C_param_struct *I2C_param);
+I2C_param_struct __IO *LTK_get_I2C_param(void);
 
 /**
   * @}
@@ -112,7 +112,7 @@ I2C_param_struct __IO *ARC_get_I2C_param(void);
 #endif
 
 
-#endif /* __ARC_I2C_H */
+#endif /* __LTK_I2C_H */
 
 /**
   * @}
@@ -123,4 +123,4 @@ I2C_param_struct __IO *ARC_get_I2C_param(void);
   */ 
  
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

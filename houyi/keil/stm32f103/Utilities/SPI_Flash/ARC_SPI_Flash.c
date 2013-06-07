@@ -1,51 +1,51 @@
 /**
   ******************************************************************************
-  * @file    ARC_SPI_Flash.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_SPI_Flash.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides SPI Flash middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_SPI_Flash.h"
-#include "ARC_GPIO.h"
-#include "ARC_RCC.h"
-#include "ARC_TouchScreen.h"
+#include "LTK_SPI_Flash.h"
+#include "LTK_GPIO.h"
+#include "LTK_RCC.h"
+#include "LTK_TouchScreen.h"
 #include <stdio.h>
 
 /** @addtogroup Utilities
   * @{
   */ 
 
-/** @addtogroup ARC_SPI
+/** @addtogroup LTK_SPI
   * @{
   */ 
 
-/** @defgroup ARC_SPI_Private_TypesDefinitions
-  * @{
-  */
-
-/**
-  * @}
-  */
-
-/** @defgroup ARC_SPI_Private_Defines
+/** @defgroup LTK_SPI_Private_TypesDefinitions
   * @{
   */
 
 /**
   * @}
+  */
+
+/** @defgroup LTK_SPI_Private_Defines
+  * @{
+  */
+
+/**
+  * @}
   */ 
 
-/** @defgroup ARC_SPI_Private_Macros
+/** @defgroup LTK_SPI_Private_Macros
   * @{
   */ 
 
@@ -53,7 +53,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_SPI_Private_Variables
+/** @defgroup LTK_SPI_Private_Variables
   * @{
   */ 
 
@@ -95,7 +95,7 @@ uint8_t volatile spi_flash_found;
   * @}
   */
 
-/** @defgroup ARC_SPI_Private_FunctionPrototypes
+/** @defgroup LTK_SPI_Private_FunctionPrototypes
   * @{
   */
 
@@ -109,7 +109,7 @@ uint8_t volatile spi_flash_found;
   * @param  flash_found: the found status.
   * @retval None.
   */
-void ARC_SPI_FLASH_set_index(uint32_t flash_index, uint8_t flash_found)
+void LTK_SPI_FLASH_set_index(uint32_t flash_index, uint8_t flash_found)
 {
     spi_flash_index = flash_index;
     spi_flash_found = flash_found;
@@ -120,7 +120,7 @@ void ARC_SPI_FLASH_set_index(uint32_t flash_index, uint8_t flash_found)
   * @param  *flash_index: the flash index.
   * @retval the flash found status.
   */
-uint8_t ARC_SPI_FLASH_get_index(uint32_t *flash_index)
+uint8_t LTK_SPI_FLASH_get_index(uint32_t *flash_index)
 {
     *flash_index = 0;
     if(spi_flash_found != 0)
@@ -133,34 +133,34 @@ uint8_t ARC_SPI_FLASH_get_index(uint32_t *flash_index)
   * @param  None
   * @retval None.
   */
-void ARC_SPI_FLASH_ID_check(void)
+void LTK_SPI_FLASH_ID_check(void)
 {
     uint32_t i = 0, flash_list_count = 0;
     uint32_t FlashID = 0;
     
     flash_list_count = sizeof(spi_flash_list)/sizeof(SPI_FLASH_CMD);
 
-    ARC_FLASH_CS_LOW();
+    LTK_FLASH_CS_LOW();
     for(i = 0; i < flash_list_count; i++)
     {
-        ARC_SPI_SendByte(SPI1, spi_flash_list[i].flash_cmd_rdid);     
-        FlashID |= (ARC_SPI_SendByte(SPI1, FLASH_DUMMY_BYTE) & 0xFF) << 16;
-        FlashID |= (ARC_SPI_SendByte(SPI1, FLASH_DUMMY_BYTE) & 0xFF) << 8;
-        FlashID |= ARC_SPI_SendByte(SPI1, FLASH_DUMMY_BYTE) & 0xFF;
+        LTK_SPI_SendByte(SPI1, spi_flash_list[i].flash_cmd_rdid);     
+        FlashID |= (LTK_SPI_SendByte(SPI1, FLASH_DUMMY_BYTE) & 0xFF) << 16;
+        FlashID |= (LTK_SPI_SendByte(SPI1, FLASH_DUMMY_BYTE) & 0xFF) << 8;
+        FlashID |= LTK_SPI_SendByte(SPI1, FLASH_DUMMY_BYTE) & 0xFF;
         
         if(spi_flash_list[i].flash_id == FlashID)
         {
             printf("%s found\n", spi_flash_list[i].flash_desc);
-            ARC_SPI_FLASH_set_index(i, 1);
+            LTK_SPI_FLASH_set_index(i, 1);
             break;
         }
     }
     
-    ARC_FLASH_CS_HIGH(); 
+    LTK_FLASH_CS_HIGH(); 
     if(i == flash_list_count)
     {
         printf("flash not present or not recognized\n");
-        ARC_SPI_FLASH_set_index(0, 0);
+        LTK_SPI_FLASH_set_index(0, 0);
     }
 }
 
@@ -169,9 +169,9 @@ void ARC_SPI_FLASH_ID_check(void)
   * @param  None
   * @retval None.
   */
-void ARC_SPI_Flash_Init(void)
+void LTK_SPI_Flash_Init(void)
 {
-    ARC_SPI_Init();
+    LTK_SPI_Init();
 }
 
 /**
@@ -180,26 +180,26 @@ void ARC_SPI_Flash_Init(void)
   * @param  None
   * @retval None
   */
-void ARC_FLASH_WaitForWriteEnd(void)
+void LTK_FLASH_WaitForWriteEnd(void)
 {
     uint8_t flashstatus = 0;
     
     /*!< Select the FLASH: Chip Select low */
-    ARC_FLASH_CS_LOW();
+    LTK_FLASH_CS_LOW();
 
     /*!< Send "Read Status Register" instruction */
-    ARC_SPI_SendByte(SPI1, spi_flash_list[spi_flash_index].flash_cmd_rdsr);
+    LTK_SPI_SendByte(SPI1, spi_flash_list[spi_flash_index].flash_cmd_rdsr);
 
     /*!< Loop as long as the memory is busy with a write cycle */
     do
     {
         /*!< Send a dummy byte to generate the clock needed by the FLASH
         and put the value of the status register in FLASH_Status variable */
-        flashstatus = ARC_SPI_SendByte(SPI1, FLASH_DUMMY_BYTE);
+        flashstatus = LTK_SPI_SendByte(SPI1, FLASH_DUMMY_BYTE);
     }while ((flashstatus & FLASH_WIP_FLAG) == SET); /* Write in progress */
 
     /*!< Deselect the FLASH: Chip Select high */
-    ARC_FLASH_CS_HIGH();
+    LTK_FLASH_CS_HIGH();
 }
 
 /**
@@ -207,16 +207,16 @@ void ARC_FLASH_WaitForWriteEnd(void)
   * @param  None
   * @retval None
   */
-void ARC_Flash_WriteEnable(void)
+void LTK_Flash_WriteEnable(void)
 {
     /*!< Select the FLASH: Chip Select low */
-    ARC_FLASH_CS_LOW();
+    LTK_FLASH_CS_LOW();
 
     /*!< Send "Write Enable" instruction */
-    ARC_SPI_SendByte(SPI1, spi_flash_list[spi_flash_index].flash_cmd_wren);
+    LTK_SPI_SendByte(SPI1, spi_flash_list[spi_flash_index].flash_cmd_wren);
 
     /*!< Deselect the FLASH: Chip Select high */
-    ARC_FLASH_CS_HIGH();
+    LTK_FLASH_CS_HIGH();
 }
 
 
@@ -225,28 +225,28 @@ void ARC_Flash_WriteEnable(void)
   * @param  SectorAddr: address of the sector to erase.
   * @retval None
   */
-void ARC_FLASH_EraseSector(uint32_t FlashAddr)
+void LTK_FLASH_EraseSector(uint32_t FlashAddr)
 {
     /*!< Send write enable instruction */
-    ARC_Flash_WriteEnable();
+    LTK_Flash_WriteEnable();
     
     /*!< Sector Erase */
     
     /*!< Select the FLASH: Chip Select low */
-    ARC_FLASH_CS_LOW();
+    LTK_FLASH_CS_LOW();
     /*!< Send Sector Erase instruction */
-    ARC_SPI_SendByte(SPI1, spi_flash_list[spi_flash_index].flash_cmd_se);
+    LTK_SPI_SendByte(SPI1, spi_flash_list[spi_flash_index].flash_cmd_se);
     /*!< Send SectorAddr high nibble address byte */
-    ARC_SPI_SendByte(SPI1, (FlashAddr & 0xFF0000) >> 16);
+    LTK_SPI_SendByte(SPI1, (FlashAddr & 0xFF0000) >> 16);
     /*!< Send SectorAddr medium nibble address byte */
-    ARC_SPI_SendByte(SPI1, (FlashAddr & 0xFF00) >> 8);
+    LTK_SPI_SendByte(SPI1, (FlashAddr & 0xFF00) >> 8);
     /*!< Send SectorAddr low nibble address byte */
-    ARC_SPI_SendByte(SPI1, FlashAddr & 0xFF);
+    LTK_SPI_SendByte(SPI1, FlashAddr & 0xFF);
     /*!< Deselect the FLASH: Chip Select high */
-    ARC_FLASH_CS_HIGH();
+    LTK_FLASH_CS_HIGH();
 
     /*!< Wait the end of Flash writing */
-    ARC_FLASH_WaitForWriteEnd();
+    LTK_FLASH_WaitForWriteEnd();
 }
 
 /**
@@ -260,36 +260,36 @@ void ARC_FLASH_EraseSector(uint32_t FlashAddr)
   *         or less than "FLASH_PAGESIZE" value.
   * @retval None
   */
-void ARC_FLASH_WritePage(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite)
+void LTK_FLASH_WritePage(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite)
 {
     /*!< Enable the write access to the FLASH */
-    ARC_Flash_WriteEnable();
+    LTK_Flash_WriteEnable();
     
     /*!< Select the FLASH: Chip Select low */
-    ARC_FLASH_CS_LOW();
+    LTK_FLASH_CS_LOW();
     /*!< Send "Write to Memory " instruction */
-    ARC_SPI_SendByte(SPI1, spi_flash_list[spi_flash_index].flash_cmd_write);
+    LTK_SPI_SendByte(SPI1, spi_flash_list[spi_flash_index].flash_cmd_write);
     /*!< Send WriteAddr high nibble address byte to write to */
-    ARC_SPI_SendByte(SPI1, (WriteAddr & 0xFF0000) >> 16);
+    LTK_SPI_SendByte(SPI1, (WriteAddr & 0xFF0000) >> 16);
     /*!< Send WriteAddr medium nibble address byte to write to */
-    ARC_SPI_SendByte(SPI1, (WriteAddr & 0xFF00) >> 8);
+    LTK_SPI_SendByte(SPI1, (WriteAddr & 0xFF00) >> 8);
     /*!< Send WriteAddr low nibble address byte to write to */
-    ARC_SPI_SendByte(SPI1, WriteAddr & 0xFF);
+    LTK_SPI_SendByte(SPI1, WriteAddr & 0xFF);
 
     /*!< while there is data to be written on the FLASH */
     while (NumByteToWrite--)
     {
         /*!< Send the current byte */
-        ARC_SPI_SendByte(SPI1, *pBuffer);
+        LTK_SPI_SendByte(SPI1, *pBuffer);
         /*!< Point on the next byte to be written */
         pBuffer++;
     }
 
     /*!< Deselect the FLASH: Chip Select high */
-    ARC_FLASH_CS_HIGH();
+    LTK_FLASH_CS_HIGH();
 
     /*!< Wait the end of Flash writing */
-    ARC_FLASH_WaitForWriteEnd();
+    LTK_FLASH_WaitForWriteEnd();
 }
 
 /**
@@ -301,7 +301,7 @@ void ARC_FLASH_WritePage(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByteT
   * @param  NumByteToWrite: number of bytes to write to the FLASH.
   * @retval None
   */
-void ARC_FLASH_WriteBuffer(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite)
+void LTK_FLASH_WriteBuffer(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite)
 {
     uint8_t num_of_page = 0, num_of_single = 0, offset_in_page = 0, num_remained_in_1st_page = 0, temp = 0;
     uint16_t spi_flash_page_size = spi_flash_list[spi_flash_index].flash_spi_pagesize;
@@ -315,20 +315,20 @@ void ARC_FLASH_WriteBuffer(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByt
     {
         if (num_of_page == 0) /*!< NumByteToWrite < FLASH_PAGESIZE */
         {
-            ARC_FLASH_WritePage(pBuffer, WriteAddr, NumByteToWrite);
+            LTK_FLASH_WritePage(pBuffer, WriteAddr, NumByteToWrite);
         }
         else /*!< NumByteToWrite > FLASH_PAGESIZE */
         {
             while (num_of_page--)
             {
-                ARC_FLASH_WritePage(pBuffer, WriteAddr, spi_flash_page_size);
+                LTK_FLASH_WritePage(pBuffer, WriteAddr, spi_flash_page_size);
                 WriteAddr +=  spi_flash_page_size;
                 pBuffer += spi_flash_page_size;
             }
 
             if (num_of_single != 0)
             {
-                ARC_FLASH_WritePage(pBuffer, WriteAddr, num_of_single);
+                LTK_FLASH_WritePage(pBuffer, WriteAddr, num_of_single);
             }
         }
     }
@@ -340,15 +340,15 @@ void ARC_FLASH_WriteBuffer(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByt
             {
                 temp = num_of_single - num_remained_in_1st_page;
 
-                ARC_FLASH_WritePage(pBuffer, WriteAddr, num_remained_in_1st_page);
+                LTK_FLASH_WritePage(pBuffer, WriteAddr, num_remained_in_1st_page);
                 WriteAddr +=  num_remained_in_1st_page;
                 pBuffer += num_remained_in_1st_page;
 
-                ARC_FLASH_WritePage(pBuffer, WriteAddr, temp);
+                LTK_FLASH_WritePage(pBuffer, WriteAddr, temp);
             }
             else
             {
-                ARC_FLASH_WritePage(pBuffer, WriteAddr, NumByteToWrite);
+                LTK_FLASH_WritePage(pBuffer, WriteAddr, NumByteToWrite);
             }
         }
         else /*!< NumByteToWrite > FLASH_PAGESIZE */
@@ -357,20 +357,20 @@ void ARC_FLASH_WriteBuffer(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByt
             num_of_page =  NumByteToWrite / spi_flash_page_size;
             num_of_single = NumByteToWrite % spi_flash_page_size;
 
-            ARC_FLASH_WritePage(pBuffer, WriteAddr, num_remained_in_1st_page);
+            LTK_FLASH_WritePage(pBuffer, WriteAddr, num_remained_in_1st_page);
             WriteAddr +=  num_remained_in_1st_page;
             pBuffer += num_remained_in_1st_page;
 
             while (num_of_page--)
             {
-                ARC_FLASH_WritePage(pBuffer, WriteAddr, spi_flash_page_size);
+                LTK_FLASH_WritePage(pBuffer, WriteAddr, spi_flash_page_size);
                 WriteAddr +=  spi_flash_page_size;
                 pBuffer += spi_flash_page_size;
             }
 
             if (num_of_single != 0)
             {
-                ARC_FLASH_WritePage(pBuffer, WriteAddr, num_of_single);
+                LTK_FLASH_WritePage(pBuffer, WriteAddr, num_of_single);
             }
         }
     }
@@ -383,31 +383,31 @@ void ARC_FLASH_WriteBuffer(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByt
   * @param  NumByteToRead: number of bytes to read from the FLASH.
   * @retval None
   */
-void ARC_FLASH_ReadBuffer(uint8_t* pBuffer, uint32_t ReadAddr, uint16_t NumByteToRead)
+void LTK_FLASH_ReadBuffer(uint8_t* pBuffer, uint32_t ReadAddr, uint16_t NumByteToRead)
 {
     /*!< Select the FLASH: Chip Select low */
-    ARC_FLASH_CS_LOW();
+    LTK_FLASH_CS_LOW();
 
     /*!< Send "Read from Memory " instruction */
-    ARC_SPI_SendByte(SPI1, spi_flash_list[spi_flash_index].flash_cmd_read);
+    LTK_SPI_SendByte(SPI1, spi_flash_list[spi_flash_index].flash_cmd_read);
 
     /*!< Send ReadAddr high nibble address byte to read from */
-    ARC_SPI_SendByte(SPI1, (ReadAddr & 0xFF0000) >> 16);
+    LTK_SPI_SendByte(SPI1, (ReadAddr & 0xFF0000) >> 16);
     /*!< Send ReadAddr medium nibble address byte to read from */
-    ARC_SPI_SendByte(SPI1, (ReadAddr& 0xFF00) >> 8);
+    LTK_SPI_SendByte(SPI1, (ReadAddr& 0xFF00) >> 8);
     /*!< Send ReadAddr low nibble address byte to read from */
-    ARC_SPI_SendByte(SPI1, ReadAddr & 0xFF);
+    LTK_SPI_SendByte(SPI1, ReadAddr & 0xFF);
 
     while (NumByteToRead--) /*!< while there is data to be read */
     {
         /*!< Read a byte from the FLASH */
-        *pBuffer = ARC_SPI_SendByte(SPI1, FLASH_DUMMY_BYTE);
+        *pBuffer = LTK_SPI_SendByte(SPI1, FLASH_DUMMY_BYTE);
         /*!< Point to the next location where the byte read will be saved */
         pBuffer++;
     }
 
     /*!< Deselect the FLASH: Chip Select high */
-    ARC_FLASH_CS_HIGH();
+    LTK_FLASH_CS_HIGH();
 }
 
 /**
@@ -422,4 +422,4 @@ void ARC_FLASH_ReadBuffer(uint8_t* pBuffer, uint32_t ReadAddr, uint16_t NumByteT
   * @}
   */  
     
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

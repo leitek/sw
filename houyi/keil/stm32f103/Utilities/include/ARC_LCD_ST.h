@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
-  * @file    ARC_LCD_ST.h
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_LCD_ST.h
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   Header files for middleware.
   ******************************************************************************
@@ -9,12 +9,12 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __ARC_LCD_ST_H
-#define __ARC_LCD_ST_H
+#ifndef __LTK_LCD_ST_H
+#define __LTK_LCD_ST_H
 
 #ifdef __cplusplus
  extern "C" {
@@ -29,11 +29,11 @@
   * @{
   */ 
 
-/** @addtogroup ARC_LCD_ST
+/** @addtogroup LTK_LCD_ST
   * @{
   */
 
-/** @defgroup ARC_LCD_ST_Exported_Types
+/** @defgroup LTK_LCD_ST_Exported_Types
   * @{
   */
 
@@ -42,7 +42,7 @@ typedef enum
     LCD_PARELLEL = 0, 
     LCD_FSMC = 1, 
     LCD_BUSTYPE_OTHER = 2
-}ARC_LCD_BusType;
+}LTK_LCD_BusType;
 
 /** 
   * @brief  LCD_Direction_TypeDef enumeration definition  
@@ -65,38 +65,38 @@ typedef enum
     LCD_HX8312      = 0x8312,
     LCD_HX8347A     = 0X0047,    
     LCD_OTHER       = 0xffff
-}ARC_LCD_TYPE;
+}LTK_LCD_TYPE;
 
 typedef enum
 {
     LCD_FONT_BIG = 0,
     LCD_FONT_SMALL = 1
-}ARC_LCD_FONT_SIZE_TYPE;
+}LTK_LCD_FONT_SIZE_TYPE;
   
 typedef struct
 {
-    ARC_LCD_TYPE LCD_Type;
-    ARC_LCD_BusType LCD_BusType;
+    LTK_LCD_TYPE LCD_Type;
+    LTK_LCD_BusType LCD_BusType;
     uint8_t  *LCD_Text;
-}ARC_LCD_Params;
+}LTK_LCD_Params;
 
 typedef struct
 {
-    ARC_LCD_FONT_SIZE_TYPE LCD_Font;
+    LTK_LCD_FONT_SIZE_TYPE LCD_Font;
     uint8_t LCD_FontHeight;
     uint8_t LCD_FontWidth;
     uint16_t LCD_Font_Color;
     uint16_t LCD_Background_color;
     uint8_t  LCD_Transparent_Flag;
     LCD_Direction_TypeDef LCD_Direction;
-}ARC_LCD_Struct_Font;
+}LTK_LCD_Struct_Font;
 
 
 /**
   * @}
   */
 
-/** @defgroup ARC_LCD_ST_Exported_Variables
+/** @defgroup LTK_LCD_ST_Exported_Variables
   * @{
   */
 extern uint16_t                     LCD_Height;
@@ -106,7 +106,7 @@ extern uint16_t                     LCD_Width;
   * @}
   */
 
-/** @defgroup ARC_LCD_ST_Exported_Constants
+/** @defgroup LTK_LCD_ST_Exported_Constants
   * @{
   */
 
@@ -303,18 +303,18 @@ extern uint16_t                     LCD_Width;
 #define Line8                       LCD_LINE_8
 #define Line9                       LCD_LINE_9
 
-#define LCD_WriteRAM_Prepare        ARC_LCD_WriteRAM_Prepare
-#define LCD_WriteRAM                ARC_LCD_WriteRAM
-#define LCD_WriteReg                ARC_LCD_WriteReg
-#define LCD_DisplayOff              ARC_LCD_DisplayOff
-#define LCD_DisplayOn               ARC_LCD_DisplayOn
-#define LCD_ReadReg                 ARC_LCD_ReadReg
+#define LCD_WriteRAM_Prepare        LTK_LCD_WriteRAM_Prepare
+#define LCD_WriteRAM                LTK_LCD_WriteRAM
+#define LCD_WriteReg                LTK_LCD_WriteReg
+#define LCD_DisplayOff              LTK_LCD_DisplayOff
+#define LCD_DisplayOn               LTK_LCD_DisplayOn
+#define LCD_ReadReg                 LTK_LCD_ReadReg
 
 /**
   * @}
   */
 
-/** @defgroup ARC_LCD_ST_Exported_Macros
+/** @defgroup LTK_LCD_ST_Exported_Macros
   * @{
   */
 
@@ -322,35 +322,35 @@ extern uint16_t                     LCD_Width;
   * @}
   */
 
-/** @defgroup ARC_LCD_ST_Exported_Functions
+/** @defgroup LTK_LCD_ST_Exported_Functions
   * @{
   */
-void ARC_LCD_Init(void); 
-ARC_LCD_Params *ARC_LCD_get_param(void);
-void ARC_LCD_Clear(uint16_t Color);
-void ARC_LCD_SetTextColor(uint16_t Color);
-void ARC_LCD_SetBackColor(uint16_t Color);
-void ARC_LCD_DrawLine(uint8_t Xpos, uint16_t Ypos, uint16_t Length, uint8_t Direction);
-void ARC_LCD_SetCursor(uint16_t Xpos, uint16_t Ypos);
-void ARC_LCD_WriteReg(uint16_t LCD_Reg, uint16_t LCD_RegValue);
-void ARC_LCD_WriteRAM_Prepare(void);
-void ARC_LCD_WriteRAM(uint16_t Data);
-uint16_t ARC_LCD_ReadReg(uint16_t LCD_Reg);
-void ARC_LCD_WriteRAMWord(uint16_t RGB_Code);
-void ARC_LCD_SetDisplayWindow(uint8_t Xpos, uint16_t Ypos, uint8_t Height, uint16_t Width);
-void ARC_LCD_SetFont(uint8_t uFont);
-void ARC_LCD_DisplayAdjStringLine(uint16_t Line,uint16_t Column,uint8_t * ptr,GL_bool Transparent_Flag);
-void ARC_LCD_PutPixel(uint16_t Xpos,uint16_t Ypos,uint16_t Color,uint8_t PixelSpec);
-uint16_t ARC_LCD_GetPixel(uint16_t Xpos,uint16_t Ypos);
-void ARC_LCD_DrawCircle(uint8_t Xpos,uint16_t Ypos,uint16_t Radius);
-void ARC_LCD_DrawBMP(uint8_t * ptrBitmap);
-void ARC_LCD_Change_Direction(LCD_Direction_TypeDef Direction);
-void ARC_LCD_PrintStringLine(uint16_t Line,uint16_t Column,uint8_t * ptr);
-void ARC_LCD_DisplayChar(uint16_t Line,uint16_t Column,uint8_t Ascii,GL_bool Transparent_Flag);
-void ARC_LCD_DrawChar(uint8_t Xpos,uint16_t Ypos,const uint16_t * c);
-void ARC_LCD_DrawColorBMP(uint8_t * ptrBitmap,uint16_t Xpos_Init,uint16_t Ypos_Init,uint16_t Height,uint16_t Width);
-void ARC_LCD_BackLightSwitch(uint8_t Backlight_State);
-uint16_t ARC_LCD_GetTextColor(void);
+void LTK_LCD_Init(void); 
+LTK_LCD_Params *LTK_LCD_get_param(void);
+void LTK_LCD_Clear(uint16_t Color);
+void LTK_LCD_SetTextColor(uint16_t Color);
+void LTK_LCD_SetBackColor(uint16_t Color);
+void LTK_LCD_DrawLine(uint8_t Xpos, uint16_t Ypos, uint16_t Length, uint8_t Direction);
+void LTK_LCD_SetCursor(uint16_t Xpos, uint16_t Ypos);
+void LTK_LCD_WriteReg(uint16_t LCD_Reg, uint16_t LCD_RegValue);
+void LTK_LCD_WriteRAM_Prepare(void);
+void LTK_LCD_WriteRAM(uint16_t Data);
+uint16_t LTK_LCD_ReadReg(uint16_t LCD_Reg);
+void LTK_LCD_WriteRAMWord(uint16_t RGB_Code);
+void LTK_LCD_SetDisplayWindow(uint8_t Xpos, uint16_t Ypos, uint8_t Height, uint16_t Width);
+void LTK_LCD_SetFont(uint8_t uFont);
+void LTK_LCD_DisplayAdjStringLine(uint16_t Line,uint16_t Column,uint8_t * ptr,GL_bool Transparent_Flag);
+void LTK_LCD_PutPixel(uint16_t Xpos,uint16_t Ypos,uint16_t Color,uint8_t PixelSpec);
+uint16_t LTK_LCD_GetPixel(uint16_t Xpos,uint16_t Ypos);
+void LTK_LCD_DrawCircle(uint8_t Xpos,uint16_t Ypos,uint16_t Radius);
+void LTK_LCD_DrawBMP(uint8_t * ptrBitmap);
+void LTK_LCD_Change_Direction(LCD_Direction_TypeDef Direction);
+void LTK_LCD_PrintStringLine(uint16_t Line,uint16_t Column,uint8_t * ptr);
+void LTK_LCD_DisplayChar(uint16_t Line,uint16_t Column,uint8_t Ascii,GL_bool Transparent_Flag);
+void LTK_LCD_DrawChar(uint8_t Xpos,uint16_t Ypos,const uint16_t * c);
+void LTK_LCD_DrawColorBMP(uint8_t * ptrBitmap,uint16_t Xpos_Init,uint16_t Ypos_Init,uint16_t Height,uint16_t Width);
+void LTK_LCD_BackLightSwitch(uint8_t Backlight_State);
+uint16_t LTK_LCD_GetTextColor(void);
 
 /**
   * @}
@@ -362,7 +362,7 @@ uint16_t ARC_LCD_GetTextColor(void);
 #endif
 
 
-#endif /* __ARC_LCD_ST_H */
+#endif /* __LTK_LCD_ST_H */
 
 /**
   * @}
@@ -373,4 +373,4 @@ uint16_t ARC_LCD_GetTextColor(void);
   */ 
  
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
-  * @file    ARC_SPI_FLASH.h
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_SPI_FLASH.h
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   Header files for middleware.
   ******************************************************************************
@@ -9,29 +9,29 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __ARC_SPI_FLASH_H
-#define __ARC_SPI_FLASH_H
+#ifndef __LTK_SPI_FLASH_H
+#define __LTK_SPI_FLASH_H
 
 #ifdef __cplusplus
  extern "C" {
 #endif 
 
 /* Includes ------------------------------------------------------------------*/
-#include "ARC_SPI.h"
+#include "LTK_SPI.h"
 
 /** @addtogroup Utilities
   * @{
   */ 
 
-/** @addtogroup ARC_SPI_FLASH
+/** @addtogroup LTK_SPI_FLASH
   * @{
   */
 
-/** @defgroup ARC_SPI_FLASH_Exported_Types
+/** @defgroup LTK_SPI_FLASH_Exported_Types
   * @{
   */
 
@@ -39,7 +39,7 @@
   * @}
   */
  
-/** @defgroup ARC_SPI_FLASH_Exported_Constants
+/** @defgroup LTK_SPI_FLASH_Exported_Constants
   * @{
   */
 
@@ -70,7 +70,7 @@ typedef struct
   * @}
   */
                                                         
-/** @defgroup ARC_SPI_FLASH_Exported_Variables
+/** @defgroup LTK_SPI_FLASH_Exported_Variables
   * @{
   */
   
@@ -82,7 +82,7 @@ extern SPI_FLASH_CMD spi_flash_list[];
   * @}
   */
 
-/** @defgroup ARC_SPI_FLASH_Exported_Macros
+/** @defgroup LTK_SPI_FLASH_Exported_Macros
   * @{
   */
 
@@ -90,15 +90,15 @@ extern SPI_FLASH_CMD spi_flash_list[];
   * @}
   */
 
-/** @defgroup ARC_SPI_FLASH_Exported_Functions
+/** @defgroup LTK_SPI_FLASH_Exported_Functions
   * @{
   */
   
-void ARC_FLASH_EraseSector(uint32_t FlashAddr); 
-void ARC_FLASH_WriteBuffer(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite);
-void ARC_FLASH_ReadBuffer(uint8_t* pBuffer, uint32_t ReadAddr, uint16_t NumByteToRead);
-void ARC_SPI_FLASH_ID_check(void);
-void ARC_SPI_Flash_Init(void);
+void LTK_FLASH_EraseSector(uint32_t FlashAddr); 
+void LTK_FLASH_WriteBuffer(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite);
+void LTK_FLASH_ReadBuffer(uint8_t* pBuffer, uint32_t ReadAddr, uint16_t NumByteToRead);
+void LTK_SPI_FLASH_ID_check(void);
+void LTK_SPI_Flash_Init(void);
 /**
   * @}
   */
@@ -109,7 +109,7 @@ void ARC_SPI_Flash_Init(void);
 #endif
 
 
-#endif /* __ARC_SPI_FLASH_H */
+#endif /* __LTK_SPI_FLASH_H */
 
 /**
   * @}
@@ -120,4 +120,4 @@ void ARC_SPI_Flash_Init(void);
   */ 
  
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

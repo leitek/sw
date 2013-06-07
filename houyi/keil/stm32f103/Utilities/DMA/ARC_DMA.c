@@ -1,16 +1,16 @@
 /**
   ******************************************************************************
-  * @file    ARC_DAM.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_DAM.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides DMA middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Includes ------------------------------------------------------------------*/
@@ -20,11 +20,11 @@
   * @{
   */ 
 
-/** @addtogroup ARC_DAM
+/** @addtogroup LTK_DAM
   * @{
   */ 
 
-/** @defgroup ARC_DAM_Private_TypesDefinitions
+/** @defgroup LTK_DAM_Private_TypesDefinitions
   * @{
   */
 
@@ -32,7 +32,7 @@
   * @}
   */
 
-/** @defgroup ARC_DAM_Private_Defines
+/** @defgroup LTK_DAM_Private_Defines
   * @{
   */
 
@@ -40,7 +40,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_DAM_Private_Macros
+/** @defgroup LTK_DAM_Private_Macros
   * @{
   */ 
 
@@ -48,7 +48,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_DAM_Private_Variables
+/** @defgroup LTK_DAM_Private_Variables
   * @{
   */ 
 
@@ -56,7 +56,7 @@
   * @}
   */
 
-/** @defgroup ARC_DAM_Private_FunctionPrototypes
+/** @defgroup LTK_DAM_Private_FunctionPrototypes
   * @{
   */
 
@@ -64,7 +64,7 @@
   * @}
   */
 
-/** @defgroup ARC_DAM_Private_Functions
+/** @defgroup LTK_DAM_Private_Functions
   * @{
   */
     
@@ -74,7 +74,7 @@
   * @param  BufferSize: the buffer size to be transferred via DMA.
   * @retval None
   */
-void ARC_DMA1_Ch2_Param_Init(const uint8_t *MemoryBaseAddr, uint32_t BufferSize)
+void LTK_DMA1_Ch2_Param_Init(const uint8_t *MemoryBaseAddr, uint32_t BufferSize)
 {
     DMA_InitTypeDef  DMA_InitStructure;  
 
@@ -100,7 +100,7 @@ void ARC_DMA1_Ch2_Param_Init(const uint8_t *MemoryBaseAddr, uint32_t BufferSize)
   * @param  BufferSize: the buffer size to be transferred via DMA.
   * @retval None
   */
-void ARC_DMA1_Ch3_Param_Init(const uint8_t *MemoryBaseAddr, uint32_t BufferSize, uint32_t memIncEnable)
+void LTK_DMA1_Ch3_Param_Init(const uint8_t *MemoryBaseAddr, uint32_t BufferSize, uint32_t memIncEnable)
 {
     DMA_InitTypeDef  DMA_InitStructure;  
 
@@ -126,7 +126,7 @@ void ARC_DMA1_Ch3_Param_Init(const uint8_t *MemoryBaseAddr, uint32_t BufferSize,
   * @param  BufferSize: the buffer size to be transferred via DMA.
   * @retval None
   */
-void ARC_DMA1_Ch4_Param_Init(const uint8_t *MemoryBaseAddr, uint32_t BufferSize)
+void LTK_DMA1_Ch4_Param_Init(const uint8_t *MemoryBaseAddr, uint32_t BufferSize)
 {
     DMA_InitTypeDef  DMA_InitStructure;  
 
@@ -158,4 +158,4 @@ void ARC_DMA1_Ch4_Param_Init(const uint8_t *MemoryBaseAddr, uint32_t BufferSize)
   * @}
   */ 
  
-/******************* (C) www.armrunc.com *****END OF FILE****/  
+/****************************** leitek.taobao.com *****************************/  

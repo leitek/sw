@@ -1,31 +1,31 @@
 /**
   ******************************************************************************
-  * @file    ARC_NVIC_API.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_NVIC_API.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides NVIC API middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_NVIC_API.h"
+#include "LTK_NVIC_API.h"
 
 /** @addtogroup Utilities
   * @{
   */ 
 
-/** @addtogroup ARC_NVIC_API
+/** @addtogroup LTK_NVIC_API
   * @{
   */ 
 
-/** @defgroup ARC_NVIC_API_Private_TypesDefinitions
+/** @defgroup LTK_NVIC_API_Private_TypesDefinitions
   * @{
   */
 
@@ -33,7 +33,7 @@
   * @}
   */
 
-/** @defgroup ARC_NVIC_API_Private_Defines
+/** @defgroup LTK_NVIC_API_Private_Defines
   * @{
   */
 
@@ -41,7 +41,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_NVIC_API_Private_Macros
+/** @defgroup LTK_NVIC_API_Private_Macros
   * @{
   */ 
 
@@ -49,7 +49,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_NVIC_API_Private_Variables
+/** @defgroup LTK_NVIC_API_Private_Variables
   * @{
   */ 
 
@@ -57,7 +57,7 @@
   * @}
   */
 
-/** @defgroup ARC_NVIC_API_Private_FunctionPrototypes
+/** @defgroup LTK_NVIC_API_Private_FunctionPrototypes
   * @{
   */
 
@@ -65,7 +65,7 @@
   * @}
   */
 
-/** @defgroup ARC_NVIC_API_Private_Functions
+/** @defgroup LTK_NVIC_API_Private_Functions
   * @{
   */
 
@@ -75,7 +75,7 @@
   * @retval None
   */
 
-void ARC_Button_NVIC_Init(void)
+void LTK_Button_NVIC_Init(void)
 {
     NVIC_InitTypeDef NVIC_InitStructure;
 
@@ -97,7 +97,7 @@ void ARC_Button_NVIC_Init(void)
   * @param  None
   * @retval None
   */
-void ARC_I2C_NVIC_Init(void)
+void LTK_I2C_NVIC_Init(void)
 {
     NVIC_InitTypeDef NVIC_InitStructure;
     
@@ -122,7 +122,7 @@ void ARC_I2C_NVIC_Init(void)
   * @param  None
   * @retval None
   */
-void ARC_TouchScreen_NVIC_Init(void)
+void LTK_TouchScreen_NVIC_Init(void)
 {
     NVIC_InitTypeDef NVIC_InitStructure;
     
@@ -141,7 +141,7 @@ void ARC_TouchScreen_NVIC_Init(void)
   * @param  None
   * @retval None
   */
-void ARC_USB_NVIC_Init(void)
+void LTK_USB_NVIC_Init(void)
 {
     NVIC_InitTypeDef NVIC_InitStructure;
 
@@ -165,7 +165,7 @@ void ARC_USB_NVIC_Init(void)
   * @param  None
   * @retval None
   */
-void ARC_ADC_NVIC_Init(void)
+void LTK_ADC_NVIC_Init(void)
 {
     NVIC_InitTypeDef NVIC_InitStructure;
     
@@ -192,4 +192,4 @@ void ARC_ADC_NVIC_Init(void)
   * @}
   */  
     
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

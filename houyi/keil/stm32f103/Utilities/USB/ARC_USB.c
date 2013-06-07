@@ -1,31 +1,31 @@
 /**
   ******************************************************************************
-  * @file    ARC_USB.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_USB.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides USB middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_USB.h"
+#include "LTK_USB.h"
 
 /** @addtogroup Utilities
   * @{
   */ 
 
-/** @addtogroup ARC_USB
+/** @addtogroup LTK_USB
   * @{
   */ 
 
-/** @defgroup ARC_USB_Private_TypesDefinitions
+/** @defgroup LTK_USB_Private_TypesDefinitions
   * @{
   */
 
@@ -33,7 +33,7 @@
   * @}
   */
 
-/** @defgroup ARC_USB_Private_Defines
+/** @defgroup LTK_USB_Private_Defines
   * @{
   */
 
@@ -41,7 +41,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_USB_Private_Macros
+/** @defgroup LTK_USB_Private_Macros
   * @{
   */ 
 
@@ -49,7 +49,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_USB_Private_Variables
+/** @defgroup LTK_USB_Private_Variables
   * @{
   */ 
 
@@ -57,7 +57,7 @@
   * @}
   */
 
-/** @defgroup ARC_USB_Private_FunctionPrototypes
+/** @defgroup LTK_USB_Private_FunctionPrototypes
   * @{
   */
 
@@ -65,7 +65,7 @@
   * @}
   */
 
-/** @defgroup ARC_USB_Private_Functions
+/** @defgroup LTK_USB_Private_Functions
   * @{
   */
   
@@ -81,4 +81,4 @@
   * @}
   */  
     
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

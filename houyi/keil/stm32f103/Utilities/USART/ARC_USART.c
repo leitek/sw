@@ -1,34 +1,34 @@
 /**
   ******************************************************************************
-  * @file    ARC_USART.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_USART.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides USART middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_USART.h"
-#include "ARC_RCC.h"
-#include "ARC_GPIO.h"
+#include "LTK_USART.h"
+#include "LTK_RCC.h"
+#include "LTK_GPIO.h"
 #include <stdio.h>
 
 /** @addtogroup Utilities
   * @{
   */ 
 
-/** @addtogroup ARC_USART
+/** @addtogroup LTK_USART
   * @{
   */ 
 
-/** @defgroup ARC_USART_Private_TypesDefinitions
+/** @defgroup LTK_USART_Private_TypesDefinitions
   * @{
   */
 
@@ -36,7 +36,7 @@
   * @}
   */
 
-/** @defgroup ARC_USART_Private_Defines
+/** @defgroup LTK_USART_Private_Defines
   * @{
   */
  
@@ -44,7 +44,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_USART_Private_Macros
+/** @defgroup LTK_USART_Private_Macros
   * @{
   */ 
 
@@ -52,7 +52,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_USART_Private_Variables
+/** @defgroup LTK_USART_Private_Variables
   * @{
   */ 
   
@@ -60,7 +60,7 @@
   * @}
   */
 
-/** @defgroup ARC_USART_Private_FunctionPrototypes
+/** @defgroup LTK_USART_Private_FunctionPrototypes
   * @{
   */
 
@@ -68,7 +68,7 @@
   * @}
   */
 
-/** @defgroup ARC_USART_Private_Functions
+/** @defgroup LTK_USART_Private_Functions
   * @{
   */
  
@@ -77,7 +77,7 @@
   * @param  None 
   * @retval None
   */
-void ARC_COM_PARAM_Init()
+void LTK_COM_PARAM_Init()
 {
     /* USART1 configured as follow:
         - BaudRate = 115200 baud  
@@ -105,11 +105,11 @@ void ARC_COM_PARAM_Init()
   * @param  None 
   * @retval None
   */
-void ARC_COM_Init()
+void LTK_COM_Init()
 {
-    ARC_COM_RCC_Init();
-    ARC_COM_GPIO_Init();
-    ARC_COM_PARAM_Init();
+    LTK_COM_RCC_Init();
+    LTK_COM_GPIO_Init();
+    LTK_COM_PARAM_Init();
 }
 
 /**
@@ -124,4 +124,4 @@ void ARC_COM_Init()
   * @}
   */ 
     
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

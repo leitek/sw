@@ -1,36 +1,36 @@
 /**
   ******************************************************************************
-  * @file    ARC_FreeRTOS.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_FreeRTOS.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @date    10/21/2011
-  * @brief   ARC middle layer. 
+  * @brief   LTK middle layer. 
   *          This file provides FreeRTOS middle layer functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "ARC_LED.h"
-#include "ARC_FreeRTOS.h"
-#include "ARC_SysTick.h"
+#include "LTK_LED.h"
+#include "LTK_FreeRTOS.h"
+#include "LTK_SysTick.h"
 
 /** @addtogroup Utilities
   * @{
   */ 
 
-/** @addtogroup ARC_FREE_RTOS
+/** @addtogroup LTK_FREE_RTOS
   * @{
   */ 
 
-/** @defgroup ARC_FREE_RTOS_Private_TypesDefinitions
+/** @defgroup LTK_FREE_RTOS_Private_TypesDefinitions
   * @{
   */
 
@@ -38,7 +38,7 @@
   * @}
   */
 
-/** @defgroup ARC_FREE_RTOS_Private_Defines
+/** @defgroup LTK_FREE_RTOS_Private_Defines
   * @{
   */
 
@@ -46,7 +46,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_FREE_RTOS_Private_Macros
+/** @defgroup LTK_FREE_RTOS_Private_Macros
   * @{
   */ 
 
@@ -54,7 +54,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_FREE_RTOS_Private_Variables
+/** @defgroup LTK_FREE_RTOS_Private_Variables
   * @{
   */ 
 
@@ -62,7 +62,7 @@
   * @}
   */
 
-/** @defgroup ARC_FREE_RTOS_Private_FunctionPrototypes
+/** @defgroup LTK_FREE_RTOS_Private_FunctionPrototypes
   * @{
   */
 
@@ -70,7 +70,7 @@
   * @}
   */
 
-/** @defgroup ARC_FREE_RTOS_Private_Functions
+/** @defgroup LTK_FREE_RTOS_Private_Functions
   * @{
   */
 
@@ -84,8 +84,8 @@ void vTask( void *pvParameters )
     /* As per most tasks, this task is implemented in an infinite loop. */
     while(1)
     {
-        ARC_LED_Toggle(0);
-        ARC_SysTick_Delay(800);
+        LTK_LED_Toggle(0);
+        LTK_SysTick_Delay(800);
     }
 }
 
@@ -143,4 +143,4 @@ void vApplicationTickHook( void )
   * @}
   */  
     
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

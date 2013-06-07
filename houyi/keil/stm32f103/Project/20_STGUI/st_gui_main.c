@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    TouchScreen_main.c 
-  * @author  armrunc (www.armrunc.com)
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   main program body.
   ******************************************************************************
@@ -9,17 +9,17 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_SysTick.h"
-#include "ARC_LCD_ST.h"
-#include "ARC_USART.h"
-#include "ARC_TouchScreen.h"
-#include "ARC_SPI_Flash.h"
-#include "ARC_Button_EXTI.h"
+#include "LTK_SysTick.h"
+#include "LTK_LCD_ST.h"
+#include "LTK_USART.h"
+#include "LTK_TouchScreen.h"
+#include "LTK_SPI_Flash.h"
+#include "LTK_Button_EXTI.h"
 #include "graphicObject.h"
 #include "JoyHal.h"
 #include "cursor.h"
@@ -27,11 +27,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/** @addtogroup ARC_Examples
+/** @addtogroup LTK_Examples
   * @{
   */
 
-/** @addtogroup ARC_TS
+/** @addtogroup LTK_TS
   * @{
   */
 
@@ -49,10 +49,10 @@
   */
 int main(void)
 {
-    ARC_SysTick_Init();
-    ARC_COM_Init();
+    LTK_SysTick_Init();
+    LTK_COM_Init();
     USART_Cmd(USART1, ENABLE);
-    ARC_LCD_Init();
+    LTK_LCD_Init();
     CursorInit(GL_NULL);
     Show_HomeScreen();
     CursorShow(200, 20);
@@ -70,4 +70,4 @@ int main(void)
   * @}
   */
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

@@ -1,21 +1,21 @@
 /**
   ******************************************************************************
-  * @file    ARC_Fatfs.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_Fatfs.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides ADC middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
 
   
 /* Includes ------------------------------------------------------------------*/
-#include "ARC_Fatfs.h"
+#include "LTK_Fatfs.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include "ff.h"
@@ -27,11 +27,11 @@
   * @{
   */ 
 
-/** @addtogroup ARC_FATFS
+/** @addtogroup LTK_FATFS
   * @{
   */ 
 
-/** @defgroup ARC_FATFS_Private_TypesDefinitions
+/** @defgroup LTK_FATFS_Private_TypesDefinitions
   * @{
   */
 
@@ -39,7 +39,7 @@
   * @}
   */
 
-/** @defgroup ARC_FATFS_Private_Defines
+/** @defgroup LTK_FATFS_Private_Defines
   * @{
   */
 
@@ -47,7 +47,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_FATFS_Private_Macros
+/** @defgroup LTK_FATFS_Private_Macros
   * @{
   */ 
 
@@ -55,7 +55,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_FATFS_Private_Variables
+/** @defgroup LTK_FATFS_Private_Variables
   * @{
   */ 
 
@@ -63,7 +63,7 @@
   * @}
   */
 
-/** @defgroup ARC_FATFS_Private_FunctionPrototypes
+/** @defgroup LTK_FATFS_Private_FunctionPrototypes
   * @{
   */
 
@@ -71,11 +71,11 @@
   * @}
   */
 
-/** @defgroup ARC_FATFS_Private_Functions
+/** @defgroup LTK_FATFS_Private_Functions
   * @{
   */
 
-void ARC_fat_menu_init(void)
+void LTK_fat_menu_init(void)
 {
     uint8_t key = 0;
     while (1)
@@ -95,39 +95,39 @@ void ARC_fat_menu_init(void)
         switch (key)
         {
             case 'f':           //Format
-                ARC_format_disk();
+                LTK_format_disk();
                 break;
                   
             case 'c':           //Creat File
-                ARC_creat_file();
+                LTK_creat_file();
                 break;
                 
             case 'd':           //Delete File
-                ARC_delete_file();
+                LTK_delete_file();
                 break;
                 
             case 'l':           //list Files
-                ARC_list_file();
+                LTK_list_file();
                 break;
                 
             case 'i':           //Disk info
-                ARC_get_disk_info();
+                LTK_get_disk_info();
                 break;
                 
             case 't':           //Creat Dir
-                ARC_creat_dir();
+                LTK_creat_dir();
                 break;
                 
             case 'e':           //Edit File
-                ARC_edit_file();
+                LTK_edit_file();
                 break;
                 
             case 'r':           //Read File
-                ARC_read_file();
+                LTK_read_file();
                 break;
                 
             case 's':           //soft reset
-                ARC_Sys_Soft_Reset();
+                LTK_Sys_Soft_Reset();
                 break;
                 
             default:
@@ -137,7 +137,7 @@ void ARC_fat_menu_init(void)
     }
 }
 
-void ARC_edit_file(void)
+void LTK_edit_file(void)
 {
     FATFS fs;
     FIL file;
@@ -229,7 +229,7 @@ void ARC_edit_file(void)
     }
 }
 
-void ARC_read_file(void)
+void LTK_read_file(void)
 {
     FATFS fs;
     FIL file;
@@ -299,7 +299,7 @@ void ARC_read_file(void)
     f_mount(0,NULL);
 }
 
-void ARC_creat_dir(void)
+void LTK_creat_dir(void)
 {
     FATFS fs;        
     FRESULT res;     
@@ -326,7 +326,7 @@ void ARC_creat_dir(void)
     f_mount(0,NULL);
 }
 
-void ARC_format_disk(void)
+void LTK_format_disk(void)
 {
     FATFS fs;
     uint8_t res;
@@ -349,7 +349,7 @@ void ARC_format_disk(void)
     f_mount(0,NULL);
 }
 
-void ARC_creat_file(void)
+void LTK_creat_file(void)
 {
     FIL file;
     FIL *pf = &file;
@@ -384,7 +384,7 @@ void ARC_creat_file(void)
     f_mount(0,NULL);
 }
 
-void ARC_delete_file(void)
+void LTK_delete_file(void)
 {
     FATFS fs;
     FRESULT res;
@@ -418,7 +418,7 @@ void ARC_delete_file(void)
     f_mount(0,NULL);
 }
 
-void ARC_list_file(void)
+void LTK_list_file(void)
 {
     FATFS fs;
     FILINFO finfo;
@@ -479,7 +479,7 @@ void ARC_list_file(void)
     f_mount(0,NULL);
 }
 
-void ARC_get_disk_info(void)
+void LTK_get_disk_info(void)
 {
     FATFS fs;
     FATFS *fls = &fs;
@@ -511,7 +511,7 @@ void ARC_get_disk_info(void)
     f_mount(0,NULL);
 }
 
-void ARC_Sys_Soft_Reset(void)
+void LTK_Sys_Soft_Reset(void)
 {   
     NVIC_SystemReset();
 }
@@ -528,4 +528,4 @@ void ARC_Sys_Soft_Reset(void)
   * @}
   */  
     
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

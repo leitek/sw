@@ -1,35 +1,35 @@
 /**
   ******************************************************************************
-  * @file    ARC_Button_EXTI.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_Button_EXTI.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides button EXTI middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_Button_EXTI.h"
-#include "ARC_GPIO.h"
-#include "ARC_RCC.h"
-#include "ARC_EXTI.h"
-#include "ARC_NVIC_API.h"
+#include "LTK_Button_EXTI.h"
+#include "LTK_GPIO.h"
+#include "LTK_RCC.h"
+#include "LTK_EXTI.h"
+#include "LTK_NVIC_API.h"
 
 /** @addtogroup Utilities
   * @{
   */ 
 
-/** @addtogroup ARC_Button_EXTI
+/** @addtogroup LTK_Button_EXTI
   * @{
   */ 
 
-/** @defgroup ARC_Button_EXTI_Private_TypesDefinitions
+/** @defgroup LTK_Button_EXTI_Private_TypesDefinitions
   * @{
   */
 
@@ -37,7 +37,7 @@
   * @}
   */
 
-/** @defgroup ARC_Button_EXTI_Private_Defines
+/** @defgroup LTK_Button_EXTI_Private_Defines
   * @{
   */
 
@@ -45,7 +45,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_Button_EXTI_Private_Macros
+/** @defgroup LTK_Button_EXTI_Private_Macros
   * @{
   */ 
 
@@ -53,7 +53,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_Button_EXTI_Private_Variables
+/** @defgroup LTK_Button_EXTI_Private_Variables
   * @{
   */ 
 
@@ -61,7 +61,7 @@
   * @}
   */
 
-/** @defgroup ARC_Button_EXTI_Private_FunctionPrototypes
+/** @defgroup LTK_Button_EXTI_Private_FunctionPrototypes
   * @{
   */
 
@@ -69,7 +69,7 @@
   * @}
   */
 
-/** @defgroup ARC_Button_EXTI_Private_Functions
+/** @defgroup LTK_Button_EXTI_Private_Functions
   * @{
   */
   
@@ -78,12 +78,12 @@
   * @param  None
   * @retval None
   */
-void ARC_Button_Init()
+void LTK_Button_Init()
 {
-    ARC_Button_RCC_Init();
-    ARC_Button_GPIO_Init();
-    ARC_Button_NVIC_Init();
-    ARC_Button_EXTI_Init();
+    LTK_Button_RCC_Init();
+    LTK_Button_GPIO_Init();
+    LTK_Button_NVIC_Init();
+    LTK_Button_EXTI_Init();
 }
 
 /**
@@ -91,7 +91,7 @@ void ARC_Button_Init()
   * @param  Button: the button which you want to get the state from.
   * @retval the state of the button.
   */
-uint8_t ARC_Button_State(uint8_t Button)
+uint8_t LTK_Button_State(uint8_t Button)
 {
     if (Button == 0)
         return GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_1);
@@ -112,4 +112,4 @@ uint8_t ARC_Button_State(uint8_t Button)
   * @}
   */
   
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

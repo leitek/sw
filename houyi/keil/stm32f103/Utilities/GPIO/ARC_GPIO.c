@@ -1,16 +1,16 @@
 /**
   ******************************************************************************
-  * @file    ARC_GPIO.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_GPIO.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides GPIO middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Includes ------------------------------------------------------------------*/
@@ -21,11 +21,11 @@
   * @{
   */ 
 
-/** @addtogroup ARC_GPIO
+/** @addtogroup LTK_GPIO
   * @{
   */ 
       
-/** @defgroup ARC_GPIO_Private_TypesDefinitions
+/** @defgroup LTK_GPIO_Private_TypesDefinitions
   * @{
   */
 
@@ -33,7 +33,7 @@
   * @}
   */
 
-/** @defgroup ARC_GPIO_Private_Defines
+/** @defgroup LTK_GPIO_Private_Defines
   * @{
   */
 
@@ -41,7 +41,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_GPIO_Private_Macros
+/** @defgroup LTK_GPIO_Private_Macros
   * @{
   */ 
 
@@ -49,7 +49,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_GPIO_Private_Variables
+/** @defgroup LTK_GPIO_Private_Variables
   * @{
   */ 
   
@@ -57,7 +57,7 @@
   * @}
   */
 
-/** @defgroup ARC_GPIO_Private_FunctionPrototypes
+/** @defgroup LTK_GPIO_Private_FunctionPrototypes
   * @{
   */
 
@@ -65,7 +65,7 @@
   * @}
   */
 
-/** @defgroup ARC_GPIO_Private_Functions
+/** @defgroup LTK_GPIO_Private_Functions
   * @{
   */
 
@@ -82,7 +82,7 @@
         | LED1 | PA2 |
         --------------
 */
-void ARC_LED_GPIO_Init()
+void LTK_LED_GPIO_Init()
 {
     GPIO_InitTypeDef GPIO_InitStructure;
     /* Configure the LED0 pin */
@@ -112,7 +112,7 @@ void ARC_LED_GPIO_Init()
         | button1 | PC3 |
         ------------------
 */
-void ARC_Button_GPIO_Init()
+void LTK_Button_GPIO_Init()
 {
     GPIO_InitTypeDef GPIO_InitStructure;
     /* Configure the Button0 pin */
@@ -149,7 +149,7 @@ void ARC_Button_GPIO_Init()
         | TS CS    | PC7  |
         -------------------
 */
-void ARC_SPI_GPIO_Init()
+void LTK_SPI_GPIO_Init()
 {
     GPIO_InitTypeDef GPIO_InitStructure;
 
@@ -206,7 +206,7 @@ void ARC_SPI_GPIO_Init()
         | LCD_BL      | PC5  |
         ----------------------
 */ 
-void ARC_LCD_GPIO_Init()
+void LTK_LCD_GPIO_Init()
 {
     GPIO_InitTypeDef GPIO_InitStructure;
 
@@ -240,7 +240,7 @@ void ARC_LCD_GPIO_Init()
         | SDA | PB7 |
         -------------
 */ 
-void ARC_I2C_GPIO_Init()
+void LTK_I2C_GPIO_Init()
 {
     GPIO_InitTypeDef GPIO_InitStructure;
 
@@ -266,7 +266,7 @@ void ARC_I2C_GPIO_Init()
         | PEN  | PC6  |
         ---------------
 */
-void ARC_TouchScreen_GPIO_Init()
+void LTK_TouchScreen_GPIO_Init()
 {
     GPIO_InitTypeDef GPIO_InitStructure;
     /*!< Configure PEN interrupt pin */
@@ -287,7 +287,7 @@ void ARC_TouchScreen_GPIO_Init()
         ------------------
 */
 
-void ARC_TIM_PWM_GPIO_Init()
+void LTK_TIM_PWM_GPIO_Init()
 {
     GPIO_InitTypeDef GPIO_InitStructure;
 
@@ -312,7 +312,7 @@ void ARC_TIM_PWM_GPIO_Init()
         | RX | PA10 |
         -------------
 */
-void ARC_COM_GPIO_Init()
+void LTK_COM_GPIO_Init()
 {
     GPIO_InitTypeDef GPIO_InitStructure;
 
@@ -338,7 +338,7 @@ void ARC_COM_GPIO_Init()
         | ADC_IN_1 | PC2  |
         --------------------
 */
-void ARC_ADC_GPIO_Init()
+void LTK_ADC_GPIO_Init()
 {
     GPIO_InitTypeDef GPIO_InitStructure;
 
@@ -360,4 +360,4 @@ void ARC_ADC_GPIO_Init()
   * @}
   */ 
     
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

@@ -48,4 +48,4 @@ void EP7_OUT_Callback(void);
 
 #endif /*__USB_ISTR_H*/
 
-/******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
+/******************* (C) COPYRIGHT 2011 STMicroelectronics ***************************/

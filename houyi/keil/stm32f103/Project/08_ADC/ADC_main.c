@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    ADC_main.c 
-  * @author  armrunc (www.armrunc.com)
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   main program body.
   ******************************************************************************
@@ -9,22 +9,22 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
 #include "stm32f10x_it.h"
-#include "ARC_ADC.h"
-#include "ARC_USART.h"
-#include "ARC_SysTick.h"
+#include "LTK_ADC.h"
+#include "LTK_USART.h"
+#include "LTK_SysTick.h"
 #include "stdio.h"
 
-/** @addtogroup ARC_Examples
+/** @addtogroup LTK_Examples
   * @{
   */
 
-/** @addtogroup ARC_ADC
+/** @addtogroup LTK_ADC
   * @{
   */
 
@@ -42,8 +42,8 @@
   */
 int main(void)
 {
-    ARC_SysTick_Init();
-    ARC_ADC_Init();
+    LTK_SysTick_Init();
+    LTK_ADC_Init();
     /* Enable ADC1 */
     ADC_Cmd(ADC1, ENABLE);
 
@@ -60,13 +60,13 @@ int main(void)
     /* Start ADC1 Software Conversion */ 
     ADC_SoftwareStartConvCmd(ADC1, ENABLE);
 
-    ARC_COM_Init();
+    LTK_COM_Init();
     USART_Cmd(USART1, ENABLE);
 
     while (1)
     {
         printf("0x%x\n", ADC1ConvertedValue);
-        ARC_SysTick_Delay(500);
+        LTK_SysTick_Delay(500);
         
     }  
 }
@@ -79,4 +79,4 @@ int main(void)
   * @}
   */
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

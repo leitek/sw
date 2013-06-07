@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
-  * @file    ARC_Button_EXTI.h
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_Button_EXTI.h
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   Header files for middleware.
   ******************************************************************************
@@ -9,12 +9,12 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __ARC_BUTTON_EXTI_H
-#define __ARC_BUTTON_EXTI_H
+#ifndef __LTK_BUTTON_EXTI_H
+#define __LTK_BUTTON_EXTI_H
 
 #ifdef __cplusplus
  extern "C" {
@@ -26,19 +26,11 @@
   * @{
   */ 
 
-/** @addtogroup ARC_Button_EXTI
+/** @addtogroup LTK_Button_EXTI
   * @{
   */
 
-/** @defgroup ARC_Button_EXTI_Exported_Types
-  * @{
-  */
-
-/**
-  * @}
-  */
-
-/** @defgroup ARC_Button_EXTI_Exported_Constants
+/** @defgroup LTK_Button_EXTI_Exported_Types
   * @{
   */
 
@@ -46,7 +38,7 @@
   * @}
   */
 
-/** @defgroup ARC_Button_EXTI_Exported_Macros
+/** @defgroup LTK_Button_EXTI_Exported_Constants
   * @{
   */
 
@@ -54,10 +46,18 @@
   * @}
   */
 
-/** @defgroup ARC_Button_EXTI_Exported_Functions
+/** @defgroup LTK_Button_EXTI_Exported_Macros
   * @{
   */
-void ARC_Button_Init(void); 
+
+/**
+  * @}
+  */
+
+/** @defgroup LTK_Button_EXTI_Exported_Functions
+  * @{
+  */
+void LTK_Button_Init(void); 
  
 /**
   * @}
@@ -69,7 +69,7 @@ void ARC_Button_Init(void);
 #endif
 
 
-#endif /* __ARC_BUTTON_EXTI_H */
+#endif /* __LTK_BUTTON_EXTI_H */
 
 /**
   * @}
@@ -79,4 +79,4 @@ void ARC_Button_Init(void);
   * @}
   */ 
  
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

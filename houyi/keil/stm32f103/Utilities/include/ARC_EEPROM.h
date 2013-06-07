@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
-  * @file    ARC_EEPROM.h
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_EEPROM.h
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   Header files for middleware.
   ******************************************************************************
@@ -9,12 +9,12 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __ARC_EEPROM_H
-#define __ARC_EEPROM_H
+#ifndef __LTK_EEPROM_H
+#define __LTK_EEPROM_H
 
 #ifdef __cplusplus
  extern "C" {
@@ -26,19 +26,11 @@
   * @{
   */ 
 
-/** @addtogroup ARC_EEPROM
+/** @addtogroup LTK_EEPROM
   * @{
   */
 
-/** @defgroup ARC_EEPROM_Exported_Types
-  * @{
-  */
-
-/**
-  * @}
-  */
-
-/** @defgroup ARC_EEPROM_Exported_Constants
+/** @defgroup LTK_EEPROM_Exported_Types
   * @{
   */
 
@@ -46,7 +38,7 @@
   * @}
   */
 
-/** @defgroup ARC_EEPROM_Exported_Macros
+/** @defgroup LTK_EEPROM_Exported_Constants
   * @{
   */
 
@@ -54,12 +46,20 @@
   * @}
   */
 
-/** @defgroup ARC_EEPROM_Exported_Functions
+/** @defgroup LTK_EEPROM_Exported_Macros
+  * @{
+  */
+
+/**
+  * @}
+  */
+
+/** @defgroup LTK_EEPROM_Exported_Functions
   * @{
   */
   
-void ARC_EEPROM_Write(uint8_t *EEPBuff, uint32_t SubAdd, uint32_t EEPSize);
-void ARC_EEPROM_Read(uint8_t *RXEEPBuff, uint32_t SubAdd, uint32_t EEPSize);
+void LTK_EEPROM_Write(uint8_t *EEPBuff, uint32_t SubAdd, uint32_t EEPSize);
+void LTK_EEPROM_Read(uint8_t *RXEEPBuff, uint32_t SubAdd, uint32_t EEPSize);
 /**
   * @}
   */
@@ -70,7 +70,7 @@ void ARC_EEPROM_Read(uint8_t *RXEEPBuff, uint32_t SubAdd, uint32_t EEPSize);
 #endif
 
 
-#endif /* __ARC_EEPROM_H */
+#endif /* __LTK_EEPROM_H */
 
 /**
   * @}
@@ -80,4 +80,4 @@ void ARC_EEPROM_Read(uint8_t *RXEEPBuff, uint32_t SubAdd, uint32_t EEPSize);
   * @}
   */ 
  
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

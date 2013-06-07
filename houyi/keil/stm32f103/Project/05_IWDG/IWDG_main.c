@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    IWDG_main.c 
-  * @author  armrunc (www.armrunc.com)
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   main program body.
   ******************************************************************************
@@ -9,23 +9,23 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_RCC.h"
-#include "ARC_EXTI.h"
-#include "ARC_GPIO.h"
-#include "ARC_NVIC_API.h"
-#include "ARC_Button_EXTI.h"
-#include "ARC_SysTick.h"
-#include "ARC_IWDG.h"
-/** @addtogroup ARC_Examples
+#include "LTK_RCC.h"
+#include "LTK_EXTI.h"
+#include "LTK_GPIO.h"
+#include "LTK_NVIC_API.h"
+#include "LTK_Button_EXTI.h"
+#include "LTK_SysTick.h"
+#include "LTK_IWDG.h"
+/** @addtogroup LTK_Examples
   * @{
   */
 
-/** @addtogroup ARC_IWDG
+/** @addtogroup LTK_IWDG
   * @{
   */
 
@@ -43,15 +43,15 @@
   */
 int main(void)
 {
-    ARC_LED_Init();
-    ARC_Button_Init();
-    ARC_SysTick_Init();  
-    ARC_IWDG_Init(IWDG_Prescaler_256, (2 * 40000 / 256));
-    ARC_LED_Set(0, 1);
-    ARC_LED_Set(1, 1);
-    ARC_SysTick_Delay(1000);
-    ARC_LED_Set(0, 0);
-    ARC_LED_Set(1, 0);
+    LTK_LED_Init();
+    LTK_Button_Init();
+    LTK_SysTick_Init();  
+    LTK_IWDG_Init(IWDG_Prescaler_256, (2 * 40000 / 256));
+    LTK_LED_Set(0, 1);
+    LTK_LED_Set(1, 1);
+    LTK_SysTick_Delay(1000);
+    LTK_LED_Set(0, 0);
+    LTK_LED_Set(1, 0);
     IWDG_Enable();
     while (1)
     {
@@ -66,4 +66,4 @@ int main(void)
   * @}
   */
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

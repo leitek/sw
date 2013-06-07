@@ -1,48 +1,48 @@
 /**
   ******************************************************************************
-  * @file    ARC_TIM_PWM.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_TIM_PWM.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides TIM PWM middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_GPIO.h"
-#include "ARC_RCC.h"
+#include "LTK_GPIO.h"
+#include "LTK_RCC.h"
 
 /** @addtogroup Utilities
   * @{
   */ 
 
-/** @addtogroup ARC_TIM_PWM
+/** @addtogroup LTK_TIM_PWM
   * @{
   */ 
 
-/** @defgroup ARC_TIM_PWM_Private_TypesDefinitions
-  * @{
-  */
-
-/**
-  * @}
-  */
-
-/** @defgroup ARC_TIM_PWM_Private_Defines
+/** @defgroup LTK_TIM_PWM_Private_TypesDefinitions
   * @{
   */
 
 /**
   * @}
+  */
+
+/** @defgroup LTK_TIM_PWM_Private_Defines
+  * @{
+  */
+
+/**
+  * @}
   */ 
 
-/** @defgroup ARC_TIM_PWM_Private_Macros
+/** @defgroup LTK_TIM_PWM_Private_Macros
   * @{
   */ 
 
@@ -50,7 +50,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_TIM_PWM_Private_Variables
+/** @defgroup LTK_TIM_PWM_Private_Variables
   * @{
   */ 
 
@@ -58,7 +58,7 @@
   * @}
   */
 
-/** @defgroup ARC_TIM_PWM_Private_FunctionPrototypes
+/** @defgroup LTK_TIM_PWM_Private_FunctionPrototypes
   * @{
   */
 
@@ -71,7 +71,7 @@
   * @param  None
   * @retval None
   */
-void ARC_TIM_PWM_PARAM_Init()
+void LTK_TIM_PWM_PARAM_Init()
 {
     /* -----------------------------------------------------------------------
     TIM2 Configuration: generate 1 PWM signals:
@@ -117,11 +117,11 @@ void ARC_TIM_PWM_PARAM_Init()
   * @param  None
   * @retval None
   */
-void ARC_TIM_PWM_Init()
+void LTK_TIM_PWM_Init()
 {
-    ARC_TIM_PWM_RCC_Init();
-    ARC_TIM_PWM_GPIO_Init();
-    ARC_TIM_PWM_PARAM_Init();
+    LTK_TIM_PWM_RCC_Init();
+    LTK_TIM_PWM_GPIO_Init();
+    LTK_TIM_PWM_PARAM_Init();
 }
 
 /**
@@ -136,4 +136,4 @@ void ARC_TIM_PWM_Init()
   * @}
   */  
     
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

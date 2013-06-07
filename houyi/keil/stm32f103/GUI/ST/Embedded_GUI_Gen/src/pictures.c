@@ -14,7 +14,7 @@
 * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
 * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
 *
-* <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+* COPYRIGHT 2012 STMicroelectronicsCOPYRIGHT
 *******************************************************************************
 */ 
 /** @addtogroup Embedded_GUI_Example
@@ -5256,5 +5256,5 @@ const unsigned char DesignIcon06_Image[83286]=
   */
 
 
-/******************* (C) COPYRIGHT 2012 STMicroelectronics *****END OF FILE****/ 
+/******************* (C) COPYRIGHT 2012 STMicroelectronics ***************************/ 
 

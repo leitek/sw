@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    freertos_main.c 
-  * @author  armrunc (www.armrunc.com)
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   main program body.
   ******************************************************************************
@@ -9,21 +9,21 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "FreeRTOS.h"
 #include "task.h"
 #include "stm32f10x.h"
-#include "ARC_FreeRTOS.h"
-#include "ARC_LED.h"
+#include "LTK_FreeRTOS.h"
+#include "LTK_LED.h"
 
-/** @addtogroup ARC_Examples
+/** @addtogroup LTK_Examples
   * @{
   */
 
-/** @addtogroup ARC_FREERTOS
+/** @addtogroup LTK_FREERTOS
   * @{
   */
 
@@ -35,13 +35,13 @@
 /* Private functions ---------------------------------------------------------*/
 
 /**
-  * @brief  Main program, freeRTOS immigration to ARC board example.
+  * @brief  Main program, freeRTOS immigration to LTK board example.
   * @param  None
   * @retval None
   */
 int main(void)
 {
-    ARC_LED_Init();
+    LTK_LED_Init();
     
     /* Create one task. */
     xTaskCreate(    vTask,     /* Pointer to the function that implements the task. */
@@ -70,4 +70,4 @@ int main(void)
   * @}
   */
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

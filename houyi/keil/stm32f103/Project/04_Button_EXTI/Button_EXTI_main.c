@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    Button_EXTI_main.c 
-  * @author  armrunc (www.armrunc.com)
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   main program body.
   ******************************************************************************
@@ -9,19 +9,19 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_LED.h"
-#include "ARC_Button_EXTI.h"
+#include "LTK_LED.h"
+#include "LTK_Button_EXTI.h"
 
-/** @addtogroup ARC_Examples
+/** @addtogroup LTK_Examples
   * @{
   */
 
-/** @addtogroup ARC_Button_EXTI
+/** @addtogroup LTK_Button_EXTI
   * @{
   */
 
@@ -39,8 +39,8 @@
   */
 int main(void)
 {     
-    ARC_LED_Init();
-    ARC_Button_Init();  
+    LTK_LED_Init();
+    LTK_Button_Init();  
     while (1)
     {
     }
@@ -54,4 +54,4 @@ int main(void)
   * @}
   */
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

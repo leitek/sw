@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
-  * @file    ARC_TouchScreen.h
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_TouchScreen.h
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   Header files for middleware.
   ******************************************************************************
@@ -9,12 +9,12 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __ARC_TouchScreen_H
-#define __ARC_TouchScreen_H
+#ifndef __LTK_TouchScreen_H
+#define __LTK_TouchScreen_H
 
 #ifdef __cplusplus
  extern "C" {
@@ -22,7 +22,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#if (defined ARC_UCGUI && defined ARC_FREERTOS)
+#if (defined LTK_UCGUI && defined LTK_FREERTOS)
 #include "FreeRTOS.h"
 #include "semphr.h"
 #endif
@@ -30,11 +30,11 @@
   * @{
   */ 
 
-/** @addtogroup ARC_TouchScreen
+/** @addtogroup LTK_TouchScreen
   * @{
   */
 
-/** @defgroup ARC_TouchScreen_Exported_Types
+/** @defgroup LTK_TouchScreen_Exported_Types
   * @{
   */
 typedef enum
@@ -69,17 +69,17 @@ typedef struct
 /**
   * @}
   */
-/** @defgroup ARC_TouchScreen_Exported_Variables
+/** @defgroup LTK_TouchScreen_Exported_Variables
   * @{
   */
-#if (defined ARC_UCGUI && defined ARC_FREERTOS)
+#if (defined LTK_UCGUI && defined LTK_FREERTOS)
 extern xSemaphoreHandle xBinarySemaphore_ts;
 #endif
 /**
   * @}
   */
 
-/** @defgroup ARC_TouchScreen_Exported_Constants
+/** @defgroup LTK_TouchScreen_Exported_Constants
   * @{
   */
 
@@ -87,27 +87,27 @@ extern xSemaphoreHandle xBinarySemaphore_ts;
   * @}
   */
 
-/** @defgroup ARC_TouchScreen_Exported_Macros
+/** @defgroup LTK_TouchScreen_Exported_Macros
   * @{
   */
   
-#define ARC_PEN_STATE()  GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_6)
+#define LTK_PEN_STATE()  GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_6)
 
 /**
   * @}
   */
 
-/** @defgroup ARC_TouchScreen_Exported_Functions
+/** @defgroup LTK_TouchScreen_Exported_Functions
   * @{
   */
   
-void ARC_TouchScreen_Init(void);
-void ARC_TouchScreen_Rd_Phisical_XY(void);
-uint8_t ARC_TouchScreen_Rd_LCD_XY(void);
-pen_state_struct *ARC_get_penstate(void);
-void ARC_TouchScreen_Adjust(void);
-void ARC_TouchScreen_start(void);
-#if (defined ARC_UCGUI && defined ARC_FREERTOS)
+void LTK_TouchScreen_Init(void);
+void LTK_TouchScreen_Rd_Phisical_XY(void);
+uint8_t LTK_TouchScreen_Rd_LCD_XY(void);
+pen_state_struct *LTK_get_penstate(void);
+void LTK_TouchScreen_Adjust(void);
+void LTK_TouchScreen_start(void);
+#if (defined LTK_UCGUI && defined LTK_FREERTOS)
 void Touchscreen ( void *pvParameters );
 #endif
  
@@ -121,7 +121,7 @@ void Touchscreen ( void *pvParameters );
 #endif
 
 
-#endif /* __ARC_TouchScreen_H */
+#endif /* __LTK_TouchScreen_H */
 
 /**
   * @}
@@ -131,4 +131,4 @@ void Touchscreen ( void *pvParameters );
   * @}
   */ 
  
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

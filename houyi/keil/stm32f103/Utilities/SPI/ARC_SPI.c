@@ -1,33 +1,33 @@
 /**
   ******************************************************************************
-  * @file    ARC_SPI.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_SPI.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides SPI middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_SPI.h"
-#include "ARC_GPIO.h"
-#include "ARC_RCC.h"
+#include "LTK_SPI.h"
+#include "LTK_GPIO.h"
+#include "LTK_RCC.h"
 
 /** @addtogroup Utilities
   * @{
   */ 
 
-/** @addtogroup ARC_SPI
+/** @addtogroup LTK_SPI
   * @{
   */ 
 
-/** @defgroup ARC_SPI_Private_TypesDefinitions
+/** @defgroup LTK_SPI_Private_TypesDefinitions
   * @{
   */
 
@@ -35,7 +35,7 @@
   * @}
   */
 
-/** @defgroup ARC_SPI_Private_Defines
+/** @defgroup LTK_SPI_Private_Defines
   * @{
   */
 
@@ -43,7 +43,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_SPI_Private_Macros
+/** @defgroup LTK_SPI_Private_Macros
   * @{
   */ 
 
@@ -51,7 +51,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_SPI_Private_Variables
+/** @defgroup LTK_SPI_Private_Variables
   * @{
   */ 
 
@@ -59,7 +59,7 @@
   * @}
   */
 
-/** @defgroup ARC_SPI_Private_FunctionPrototypes
+/** @defgroup LTK_SPI_Private_FunctionPrototypes
   * @{
   */
 
@@ -67,7 +67,7 @@
   * @}
   */
 
-/** @defgroup ARC_SPI_Private_Functions
+/** @defgroup LTK_SPI_Private_Functions
   * @{
   */
   
@@ -76,7 +76,7 @@
   * @param  *SPIx: the SPI device ID.
   * @retval None
   */
-void ARC_SPI_PARAM_Init(SPI_TypeDef *SPIx)
+void LTK_SPI_PARAM_Init(SPI_TypeDef *SPIx)
 {
     SPI_InitTypeDef  SPI_InitStructure;
     SPI_I2S_DeInit(SPI1);
@@ -88,7 +88,7 @@ void ARC_SPI_PARAM_Init(SPI_TypeDef *SPIx)
     SPI_InitStructure.SPI_CPOL = SPI_CPOL_Low;
     SPI_InitStructure.SPI_CPHA = SPI_CPHA_1Edge;
     SPI_InitStructure.SPI_NSS = SPI_NSS_Soft;
-    SPI_InitStructure.SPI_BaudRatePrescaler = ARC_SPI_DEFAULT_SPEED;
+    SPI_InitStructure.SPI_BaudRatePrescaler = LTK_SPI_DEFAULT_SPEED;
     SPI_InitStructure.SPI_FirstBit = SPI_FirstBit_MSB;
     SPI_InitStructure.SPI_CRCPolynomial = 7;
     SPI_Init(SPIx, &SPI_InitStructure);
@@ -101,14 +101,14 @@ void ARC_SPI_PARAM_Init(SPI_TypeDef *SPIx)
   * @param  None
   * @retval None.
   */
-void ARC_SPI_Init(void)
+void LTK_SPI_Init(void)
 {
-    ARC_SPI_RCC_Init();
-    ARC_SPI_GPIO_Init();
-    ARC_SPI_PARAM_Init(SPI1);
-    ARC_FLASH_CS_HIGH();
-    ARC_SD_CS_HIGH();
-    ARC_TS_CS_HIGH();
+    LTK_SPI_RCC_Init();
+    LTK_SPI_GPIO_Init();
+    LTK_SPI_PARAM_Init(SPI1);
+    LTK_FLASH_CS_HIGH();
+    LTK_SD_CS_HIGH();
+    LTK_TS_CS_HIGH();
 }
 
 
@@ -119,7 +119,7 @@ void ARC_SPI_Init(void)
   * @param  byte: byte to send.
   * @retval The value of the received byte.
   */
-uint8_t ARC_SPI_SendByte(SPI_TypeDef *SPIx, uint8_t byte)
+uint8_t LTK_SPI_SendByte(SPI_TypeDef *SPIx, uint8_t byte)
 {
     /*!< Loop while DR register in not empty */
     while (SPI_I2S_GetFlagStatus(SPIx, SPI_I2S_FLAG_TXE) == RESET);
@@ -146,4 +146,4 @@ uint8_t ARC_SPI_SendByte(SPI_TypeDef *SPIx, uint8_t byte)
   * @}
   */  
     
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

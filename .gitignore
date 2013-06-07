@@ -5,3 +5,4 @@
 !/houyi/keil/stm32f103/Project/*/MDK/*.c
 /houyi/keil/stm32f103/Workspace/*
 !/houyi/keil/stm32f103/Workspace/*.uvmpw
+/houyi/sis

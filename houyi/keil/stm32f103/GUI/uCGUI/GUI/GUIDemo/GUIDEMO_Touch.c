@@ -20,7 +20,7 @@ Purpose     : Touch demo
 #include "GUI.h"
 #include "LCD_ConfDefaults.h"      /* valid LCD configuration */
 #include "GUIDEMO.h"
-#include "ARC_TouchScreen.h"
+#include "LTK_TouchScreen.h"
 
 #if (GUI_WINSUPPORT && GUI_SUPPORT_TOUCH)
 
@@ -81,7 +81,7 @@ void _ExecCalibration(void) {
 /* Tell user to release */
   GUI_Clear();
   GUI_DispStringAt("OK", ax[0]+20, ay[0]);
-  while(!ARC_PEN_STATE())
+  while(!LTK_PEN_STATE())
   {
       GUI_Delay (100);
   }
@@ -104,7 +104,7 @@ void _ExecCalibration(void) {
     GUI_Delay (100);
   } while (1);
   
-  while(!ARC_PEN_STATE())
+  while(!LTK_PEN_STATE())
   {
       GUI_Delay (100);
   }

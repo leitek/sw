@@ -1,16 +1,16 @@
 /**
   ******************************************************************************
-  * @file    ARC_uCGUI_FreeRTOS.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_uCGUI_FreeRTOS.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides ADC middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
 
   
@@ -20,7 +20,7 @@
 #include "task.h"
 #include "semphr.h"
 #include "GUI_Private.h"
-#include "ARC_SysTick.h"
+#include "LTK_SysTick.h"
 #include <stdio.h>
 
 
@@ -28,11 +28,11 @@
   * @{
   */ 
 
-/** @addtogroup ARC_UCGUI_FREERTOS
+/** @addtogroup LTK_UCGUI_FREERTOS
   * @{
   */ 
 
-/** @defgroup ARC_UCGUI_FREERTOS_Private_TypesDefinitions
+/** @defgroup LTK_UCGUI_FREERTOS_Private_TypesDefinitions
   * @{
   */
 
@@ -40,7 +40,7 @@
   * @}
   */
 
-/** @defgroup ARC_UCGUI_FREERTOS_Private_Defines
+/** @defgroup LTK_UCGUI_FREERTOS_Private_Defines
   * @{
   */
 
@@ -48,7 +48,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_UCGUI_FREERTOS_Private_Macros
+/** @defgroup LTK_UCGUI_FREERTOS_Private_Macros
   * @{
   */ 
 
@@ -56,7 +56,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_UCGUI_FREERTOS_Private_Variables
+/** @defgroup LTK_UCGUI_FREERTOS_Private_Variables
   * @{
   */ 
 
@@ -64,7 +64,7 @@
   * @}
   */
 
-/** @defgroup ARC_UCGUI_FREERTOS_Private_FunctionPrototypes
+/** @defgroup LTK_UCGUI_FREERTOS_Private_FunctionPrototypes
   * @{
   */
 
@@ -72,7 +72,7 @@
   * @}
   */
 
-/** @defgroup ARC_UCGUI_FREERTOS_Private_Functions
+/** @defgroup LTK_UCGUI_FREERTOS_Private_Functions
   * @{
   */
   
@@ -105,7 +105,7 @@ int  GUI_X_GetTime (void)
 
 void  GUI_X_Delay (int period) 
 {
-    ARC_SysTick_Delay(period);
+    LTK_SysTick_Delay(period);
 }
 
 
@@ -116,7 +116,7 @@ void  GUI_X_Delay (int period)
 */
 void GUI_X_ExecIdle (void) 
 {
-    ARC_SysTick_Delay(1);
+    LTK_SysTick_Delay(1);
 }
 
 /*
@@ -195,5 +195,5 @@ void GUI_X_ErrorOut(const char *s)
   * @}
   */  
     
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/
 

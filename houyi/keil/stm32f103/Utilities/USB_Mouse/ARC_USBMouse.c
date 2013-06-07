@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    ARC_USBMouse.c
+  * @file    LTK_USBMouse.c
   * @author  MCD Application Team
   * @version V4.3.0
   * @date    10/15/2010
@@ -19,27 +19,27 @@
   * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
   * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
   *
-  * <h2><center>&copy; COPYRIGHT 2010 STMicroelectronics</center></h2>
+  * COPYRIGHT 2010 STMicroelectronicsCOPYRIGHT
   */ 
   
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_USBMouse.h"
-#include "ARC_RCC.h"
-#include "ARC_GPIO.h"
-#include "ARC_NVIC_API.h"
-#include "ARC_EXTI.h"
+#include "LTK_USBMouse.h"
+#include "LTK_RCC.h"
+#include "LTK_GPIO.h"
+#include "LTK_NVIC_API.h"
+#include "LTK_EXTI.h"
 #include "usb_lib.h"
 
 /** @addtogroup Utilities
   * @{
   */ 
 
-/** @addtogroup ARC_USBMouse
+/** @addtogroup LTK_USBMouse
   * @{
   */ 
 
-/** @defgroup ARC_USBMouse_Private_TypesDefinitions
+/** @defgroup LTK_USBMouse_Private_TypesDefinitions
   * @{
   */
 
@@ -47,7 +47,7 @@
   * @}
   */
 
-/** @defgroup ARC_USBMouse_Private_Defines
+/** @defgroup LTK_USBMouse_Private_Defines
   * @{
   */
 
@@ -55,7 +55,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_USBMouse_Private_Macros
+/** @defgroup LTK_USBMouse_Private_Macros
   * @{
   */ 
 
@@ -63,7 +63,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_USBMouse_Private_Variables
+/** @defgroup LTK_USBMouse_Private_Variables
   * @{
   */ 
 
@@ -71,7 +71,7 @@
   * @}
   */
 
-/** @defgroup ARC_USBMouse_Private_FunctionPrototypes
+/** @defgroup LTK_USBMouse_Private_FunctionPrototypes
   * @{
   */
 
@@ -79,7 +79,7 @@
   * @}
   */
 
-/** @defgroup ARC_USBMouse_Private_Functions
+/** @defgroup LTK_USBMouse_Private_Functions
   * @{
   */
 
@@ -88,11 +88,11 @@
   * @param  None
   * @retval None
   */
-void ARC_USBMouse_Init(void)
+void LTK_USBMouse_Init(void)
 {
-    ARC_USB_NVIC_Init();
-    ARC_USB_RCC_Init();
-    ARC_USB_EXTI_Init();
+    LTK_USB_NVIC_Init();
+    LTK_USB_RCC_Init();
+    LTK_USB_EXTI_Init();
     USB_Init();
 }
 
@@ -108,4 +108,4 @@ void ARC_USBMouse_Init(void)
   * @}
   */  
     
-/******************* (C) COPYRIGHT 2010 STMicroelectronics *****END OF FILE****/
+/******************* (C) COPYRIGHT 2010 STMicroelectronics ***************************/

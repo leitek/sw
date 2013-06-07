@@ -1,48 +1,48 @@
 /**
   ******************************************************************************
-  * @file    ARC_RTC.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_RTC.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides RTC middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_NVIC_API.h"
-#include "ARC_RTC.h"
+#include "LTK_NVIC_API.h"
+#include "LTK_RTC.h"
 
 /** @addtogroup Utilities
   * @{
   */ 
 
-/** @addtogroup ARC_RTC
+/** @addtogroup LTK_RTC
   * @{
   */ 
 
-/** @defgroup ARC_RTC_Private_TypesDefinitions
-  * @{
-  */
-
-/**
-  * @}
-  */
-
-/** @defgroup ARC_RTC_Private_Defines
+/** @defgroup LTK_RTC_Private_TypesDefinitions
   * @{
   */
 
 /**
   * @}
+  */
+
+/** @defgroup LTK_RTC_Private_Defines
+  * @{
+  */
+
+/**
+  * @}
   */ 
 
-/** @defgroup ARC_RTC_Private_Macros
+/** @defgroup LTK_RTC_Private_Macros
   * @{
   */ 
 
@@ -50,7 +50,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_RTC_Private_Variables
+/** @defgroup LTK_RTC_Private_Variables
   * @{
   */ 
 #define FIRSTYEAR   2000        // start year
@@ -61,7 +61,7 @@ static const uint8_t DaysInMonth[] = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 3
   * @}
   */
 
-/** @defgroup ARC_RTC_Private_FunctionPrototypes
+/** @defgroup LTK_RTC_Private_FunctionPrototypes
   * @{
   */
 
@@ -69,7 +69,7 @@ static const uint8_t DaysInMonth[] = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 3
   * @}
   */
 
-/** @defgroup ARC_RTC_Private_Functions
+/** @defgroup LTK_RTC_Private_Functions
   * @{
   */
 
@@ -206,7 +206,7 @@ static uint32_t struct_to_counter( const RTC_t *t )
   * @param  time_set, the time to be set.
   * @retval None
   */
-void ARC_RTC_SetCounter(uint32_t time_set)
+void LTK_RTC_SetCounter(uint32_t time_set)
 {
   /* Wait until last write operation on RTC registers has finished */
   RTC_WaitForLastTask();
@@ -221,7 +221,7 @@ void ARC_RTC_SetCounter(uint32_t time_set)
   * @param  RTC struct
   * @retval None.
   */
-void ARC_RTC_settime (const RTC_t *rtc)
+void LTK_RTC_settime (const RTC_t *rtc)
 {
     uint32_t cnt;
     RTC_t ts;
@@ -229,7 +229,7 @@ void ARC_RTC_settime (const RTC_t *rtc)
     cnt = struct_to_counter( rtc ); // non-DST counter-value
     counter_to_struct( cnt, &ts );  // normalize struct (for weekday)
     PWR_BackupAccessCmd(ENABLE);
-    ARC_RTC_SetCounter( cnt );
+    LTK_RTC_SetCounter( cnt );
     PWR_BackupAccessCmd(DISABLE);
 }
 
@@ -238,7 +238,7 @@ void ARC_RTC_settime (const RTC_t *rtc)
   * @param  *rtc rtc struct of current time
   * @retval None
   */
-void ARC_RTC_gettime (RTC_t *rtc)
+void LTK_RTC_gettime (RTC_t *rtc)
 {
     uint32_t t;
 
@@ -254,7 +254,7 @@ void ARC_RTC_gettime (RTC_t *rtc)
   * @param  None
   * @retval None
   */
-void ARC_RTC_Configuration(void)
+void LTK_RTC_Configuration(void)
 {
     /* Enable PWR and BKP clocks */
     RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR | RCC_APB1Periph_BKP, ENABLE);
@@ -295,7 +295,7 @@ void ARC_RTC_Configuration(void)
   * @param  None
   * @retval None
   */
-void ARC_RTC_Init()
+void LTK_RTC_Init()
 {
     if (BKP_ReadBackupRegister(BKP_DR1) != 0xA5A5)
     {
@@ -303,9 +303,9 @@ void ARC_RTC_Init()
         the first time the program is executed) */
 
         /* RTC Configuration */
-        ARC_RTC_Configuration();
+        LTK_RTC_Configuration();
 
-        ARC_RTC_SetCounter(0x0);
+        LTK_RTC_SetCounter(0x0);
 
         BKP_WriteBackupRegister(BKP_DR1, 0xA5A5);
     }
@@ -331,4 +331,4 @@ void ARC_RTC_Init()
   * @}
   */  
     
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

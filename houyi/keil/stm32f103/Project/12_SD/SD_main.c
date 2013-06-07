@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    SD_main.c 
-  * @author  armrunc (www.armrunc.com)
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
   * @brief   main program body.
   ******************************************************************************
@@ -9,24 +9,24 @@
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_SD.h"
-#include "ARC_USART.h"
-#include "ARC_SysTick.h"
-#include "ARC_SPI_Flash.h"
-#include "ARC_TouchScreen.h"
-#include "ARC_RCC.h"
+#include "LTK_SD.h"
+#include "LTK_USART.h"
+#include "LTK_SysTick.h"
+#include "LTK_SPI_Flash.h"
+#include "LTK_TouchScreen.h"
+#include "LTK_RCC.h"
 #include <stdio.h>
 
-/** @addtogroup ARC_Examples
+/** @addtogroup LTK_Examples
   * @{
   */
 
-/** @addtogroup ARC_SD
+/** @addtogroup LTK_SD
   * @{
   */
 
@@ -50,19 +50,19 @@ int main(void)
     uint8_t sd_response[5];
     uint8_t RxData[512];
     SD_Card_Type SD_CT = SD_Unknown;
-    ARC_SysTick_Init();
-    ARC_COM_Init();
+    LTK_SysTick_Init();
+    LTK_COM_Init();
     USART_Cmd(USART1, ENABLE);
     
-    ARC_SD_SPI_Init();
+    LTK_SD_SPI_Init();
     
     SPI_Cmd(SPI1, ENABLE); /*!< SD_SPI enable */
     
-    ARC_DMA1_RCC_Init();
+    LTK_DMA1_RCC_Init();
     
     for (i = 0; i < 3; i++)
     {
-        SD_CT = ARC_SD_SPI_Start();
+        SD_CT = LTK_SD_SPI_Start();
         if (SD_CT != SD_Unknown)
             break;
     }
@@ -78,10 +78,10 @@ int main(void)
     
     while (1)
     {
-        resp = ARC_sd_send_command(SD_CMD_READ_SINGLE_BLOCK, 0, R1, sd_response);
+        resp = LTK_sd_send_command(SD_CMD_READ_SINGLE_BLOCK, 0, R1, sd_response);
         if (resp == 0) /* READ_SINGLE_BLOCK */
         {
-            resp = ARC_SD_SPI_ReadBlock(RxData, 512);
+            resp = LTK_SD_SPI_ReadBlock(RxData, 512);
             if (resp) 
             {
                 for(i = 0; i < 512; i++)
@@ -97,7 +97,7 @@ int main(void)
         {
                 printf("Failed to send command\n"); 
         }
-        ARC_SysTick_Delay(2000);
+        LTK_SysTick_Delay(2000);
     }
 }
 
@@ -109,4 +109,4 @@ int main(void)
   * @}
   */
 
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

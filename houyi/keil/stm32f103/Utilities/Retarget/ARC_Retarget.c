@@ -1,21 +1,21 @@
 /**
   ******************************************************************************
-  * @file    ARC_Retarget.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_Retarget.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides retarget middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_Retarget.h"
+#include "LTK_Retarget.h"
 #include <stdio.h>
 
 #pragma import(__use_no_semihosting)
@@ -24,11 +24,11 @@
   * @{
   */ 
 
-/** @addtogroup ARC_RETARGET
+/** @addtogroup LTK_RETARGET
   * @{
   */ 
 
-/** @defgroup ARC_RETARGET_Private_TypesDefinitions
+/** @defgroup LTK_RETARGET_Private_TypesDefinitions
   * @{
   */
   
@@ -38,7 +38,7 @@ struct __FILE { int handle; /* Add whatever you need here */ };
   * @}
   */
 
-/** @defgroup ARC_RETARGET_Private_Defines
+/** @defgroup LTK_RETARGET_Private_Defines
   * @{
   */
 
@@ -46,7 +46,7 @@ struct __FILE { int handle; /* Add whatever you need here */ };
   * @}
   */ 
 
-/** @defgroup ARC_RETARGET_Private_Macros
+/** @defgroup LTK_RETARGET_Private_Macros
   * @{
   */ 
 
@@ -54,7 +54,7 @@ struct __FILE { int handle; /* Add whatever you need here */ };
   * @}
   */ 
 
-/** @defgroup ARC_RETARGET_Private_Variables
+/** @defgroup LTK_RETARGET_Private_Variables
   * @{
   */ 
   
@@ -65,7 +65,7 @@ FILE __stdin;
   * @}
   */
 
-/** @defgroup ARC_RETARGET_Private_FunctionPrototypes
+/** @defgroup LTK_RETARGET_Private_FunctionPrototypes
   * @{
   */
 
@@ -73,7 +73,7 @@ FILE __stdin;
   * @}
   */
 
-/** @defgroup ARC_RETARGET_Private_Functions
+/** @defgroup LTK_RETARGET_Private_Functions
   * @{
   */
   
@@ -157,4 +157,4 @@ void _sys_exit(int return_code)
   * @}
   */ 
     
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/

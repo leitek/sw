@@ -1,31 +1,31 @@
 /**
   ******************************************************************************
-  * @file    ARC_IWDG.c
-  * @author  armrunc (www.armrunc.com)
+  * @file    LTK_IWDG.c
+  * @author  leitek (leitek.taobao.com)
   * @version V1.0.0
-  * @brief   ARC middleware. 
+  * @brief   LTK middleware. 
   *          This file provides IWDG middleware functions.
   ******************************************************************************
   * @copy
   *
   * For non-commercial research and private study only.
   *
-  * <h2><center>&copy; COPYRIGHT www.armrunc.com </center></h2>
+  * COPYRIGHT leitek.taobao.com
   */ 
   
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
-#include "ARC_IWDG.h"
+#include "LTK_IWDG.h"
 
 /** @addtogroup Utilities
   * @{
   */ 
 
-/** @addtogroup ARC_IWDG
+/** @addtogroup LTK_IWDG
   * @{
   */ 
 
-/** @defgroup ARC_IWDG_Private_TypesDefinitions
+/** @defgroup LTK_IWDG_Private_TypesDefinitions
   * @{
   */
 
@@ -33,7 +33,7 @@
   * @}
   */
 
-/** @defgroup ARC_IWDG_Private_Defines
+/** @defgroup LTK_IWDG_Private_Defines
   * @{
   */
 
@@ -41,7 +41,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_IWDG_Private_Macros
+/** @defgroup LTK_IWDG_Private_Macros
   * @{
   */ 
 
@@ -49,7 +49,7 @@
   * @}
   */ 
 
-/** @defgroup ARC_IWDG_Private_Variables
+/** @defgroup LTK_IWDG_Private_Variables
   * @{
   */ 
 
@@ -57,7 +57,7 @@
   * @}
   */
 
-/** @defgroup ARC_IWDG_Private_FunctionPrototypes
+/** @defgroup LTK_IWDG_Private_FunctionPrototypes
   * @{
   */
 
@@ -65,7 +65,7 @@
   * @}
   */
 
-/** @defgroup ARC_IWDG_Private_Functions
+/** @defgroup LTK_IWDG_Private_Functions
   * @{
   */
 
@@ -74,7 +74,7 @@
   * @param  None
   * @retval None
   */
-void ARC_IWDG_Init(uint8_t IWDG_Prescaler, uint16_t Reload)
+void LTK_IWDG_Init(uint8_t IWDG_Prescaler, uint16_t Reload)
 {
     /* IWDG timeout equal to (Reload / (40KHz(LSI) / IWDG_Prescaler)) ms 
      (the timeout may varies due to LSI frequency dispersion) */
@@ -103,4 +103,4 @@ void ARC_IWDG_Init(uint8_t IWDG_Prescaler, uint16_t Reload)
   * @}
   */  
     
-/******************* (C) www.armrunc.com *****END OF FILE****/
+/****************************** leitek.taobao.com *****************************/
